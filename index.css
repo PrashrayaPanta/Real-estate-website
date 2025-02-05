@@ -1,0 +1,64 @@
+/* Base Style */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1rem = 10px; */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 300;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh 40vw repeat(3, min-content);
+  grid-template-columns: 10rem 1fr repeat(8, minmax(min-content, 12rem)) 1fr;
+}
+
+.sidebar {
+  background-color: red;
+  grid-row: 1/-1;
+}
+
+.header {
+  background-color: aqua;
+  grid-column: 2/9;
+}
+
+.top-relators {
+  background-color: bisque;
+  grid-column: 9/12;
+}
+
+.features {
+  background-color: blue;
+  grid-column: 3/11;
+}
+
+.home {
+  background-color: burlywood;
+
+  grid-column: 3/11;
+}
+
+.story {
+  background-color: bisque;
+  grid-column: 2/12;
+}
+
+.img__gallery {
+  background-color: aquamarine;
+  grid-column: 2/12;
+}
+
+.footer {
+  background-color: cadetblue;
+  grid-column: 2/12;
+}

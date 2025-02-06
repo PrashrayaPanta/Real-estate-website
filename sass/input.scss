@@ -18,48 +18,54 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh 40vw repeat(3, min-content);
-  grid-template-columns: 10rem 1fr repeat(8, minmax(min-content, 12rem)) 1fr;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [sidebar-start]10rem[sidebar-end full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]
+    1fr [full-end];
 }
 
 .sidebar {
   background-color: red;
-  //   grid-row: 1/-1;
   grid-row: 1/7;
 }
 
 .header {
   background-color: aqua;
-  grid-column: 2/9;
+  //   grid-column: 2/9;
+
+  grid-column: full-start / col-end 6;
 }
 
 .top-relators {
   background-color: bisque;
-  grid-column: 9/12;
+  grid-column: col-start 7/12;
 }
 
 .features {
   background-color: blue;
-  grid-column: 3/11;
+  grid-column: center-start / center-end;
 }
 
 .home {
   background-color: burlywood;
-
-  grid-column: 3/11;
+  grid-column: center-start / center-end;
 }
 
 .story {
   background-color: bisque;
-  grid-column: 2/12;
+  grid-column: full-start / full-end;
 }
 
 .img__gallery {
   background-color: aquamarine;
-  grid-column: 2/12;
+  grid-column: full-start / full-end;
 }
 
 .footer {
   background-color: cadetblue;
-  grid-column: 2/12;
+  grid-column: full-start / full-end;
 }

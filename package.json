@@ -1,0 +1,19 @@
+{
+  "name": "real-estate-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sasscompiler": "sass ./sass/input.scss ./index.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrashrayaPanta/Real-estate-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrashrayaPanta/Real-estate-website/issues"
+  },
+  "homepage": "https://github.com/PrashrayaPanta/Real-estate-website#readme",
+  "description": ""
+}

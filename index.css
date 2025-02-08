@@ -37,13 +37,13 @@ body {
 }
 
 .features {
-  background-color: blue;
   grid-column: center-start/center-end;
   display: grid;
   margin-top: 12rem;
   margin-bottom: 12rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   gap: 1rem;
+  line-height: 2rem;
 }
 
 .feature {

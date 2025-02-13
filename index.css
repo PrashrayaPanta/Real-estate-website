@@ -108,15 +108,15 @@ body {
   color: white;
 }
 
-.story {
-  background-color: bisque;
-  grid-column: full-start/full-end;
-}
 .story__picture {
-  background-color: red;
-}
-.story__content {
   background-color: blue;
+  grid-column: full-start/col-end 4;
+}
+
+.story__content {
+  background-color: pink;
+  grid-column: 7/12;
+  grid-column: col-end 4/full-end;
 }
 
 .img__galleries {

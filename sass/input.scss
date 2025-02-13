@@ -134,17 +134,33 @@ body {
   }
 }
 
-.story {
-  background-color: bisque;
-  grid-column: full-start / full-end;
+// .story {
+//   // background-color: bisque;
+//   // grid-column: full-start / full-end;
 
-  &__picture {
-    background-color: red;
-  }
+//   // display: grid;
 
-  &__content {
-    background-color: blue;
-  }
+//   &__pictures {
+//     // background-color: blue;
+//     background-color: pink;
+//   }
+
+//   &__content {
+//     background-color: blue;
+//   }
+// }
+
+.story__picture {
+  background-color: blue;
+
+  grid-column: full-start / col-end 4;
+}
+
+.story__content {
+  background-color: pink;
+  grid-column: 7/12;
+
+  grid-column: col-end 4 / full-end;
 }
 
 .img__galleries {
@@ -160,8 +176,6 @@ body {
 
 .footer .nav {
   list-style-type: none;
-
-  // background-color: red;
 
   display: grid;
 

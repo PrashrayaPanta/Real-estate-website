@@ -158,17 +158,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: 1.5rem;
+    padding: 6rem 7vw;
 
     .btn {
       padding: 1rem 2rem;
       background-color: aqua;
       border: none;
       border-radius: none;
-      // align-self: flex-start;
-    }
-    h3 {
-      background-color: red;
     }
   }
   &__text {

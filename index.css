@@ -18,6 +18,15 @@ html {
   margin-bottom: 2rem;
 }
 
+.heading-2 {
+  font-weight: 300;
+}
+
+.heading-3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 body {
   font-family: "Courier New", Courier, monospace;
   font-weight: 300;
@@ -137,16 +146,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  padding: 1.5rem;
+  padding: 6rem 7vw;
 }
 .story__content .btn {
   padding: 1rem 2rem;
   background-color: aqua;
   border: none;
   border-radius: none;
-}
-.story__content h3 {
-  background-color: red;
 }
 .story__text {
   font-size: 1.5rem;

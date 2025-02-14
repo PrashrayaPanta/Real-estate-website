@@ -1,3 +1,7 @@
+$color-yellow-normal: yellow;
+
+$color-red-dark: red;
+
 * {
   margin: 0px;
   padding: 0px;
@@ -9,35 +13,10 @@ html {
   font-size: 62.5%;
 }
 
-// %heading {
-//   font-weight: 300;
-// }
-
 .mb-xs {
   margin-bottom: 1rem;
 }
 
 .mb-sm {
   margin-bottom: 2rem;
-}
-
-.mb-md {
-}
-
-.mb-lg {
-}
-
-.mb-xlg {
-}
-
-.heading-1 {
-}
-
-.heading-2 {
-  font-weight: 300;
-}
-
-.heading-3 {
-  font-size: 2rem;
-  font-weight: 300;
 }

@@ -18,13 +18,18 @@ html {
   margin-bottom: 2rem;
 }
 
-.heading-2 {
+/* Base Style */
+.heading-3, .heading-2 {
   font-weight: 300;
 }
 
+.heading-2 {
+  font-size: 3rem;
+}
+
 .heading-3 {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 1.5rem;
+  color: yellow;
 }
 
 body {
@@ -130,14 +135,21 @@ body {
   grid-column: full-start/col-end 4;
   background-color: red;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
 }
-.story__picture img {
+.story__img--1 {
+  width: 100%;
   grid-row: 2/6;
   grid-column: 2/6;
-  width: 100%;
-  object-fit: cover;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+}
+.story__img--2 {
+  width: 115%;
+  grid-row: 4/6;
+  grid-column: 4/7;
+  z-index: 20;
 }
 .story__content {
   grid-column: col-end 4/full-end;

@@ -27,6 +27,53 @@ body {
 .header {
   background-color: aqua;
   grid-column: full-start / col-end 6;
+  display: grid;
+  padding: 5rem;
+
+  grid-template-rows: 1fr min-content minmax(min-content, max-content) 1fr max-content;
+
+  // grid-template-columns: max-content;
+
+  // justify-content: center;
+
+  grid-row-gap: 2rem;
+
+  &__logo {
+    height: 2rem;
+    justify-self: center;
+  }
+
+  .btn {
+    align-self: start;
+    justify-self: start;
+    padding: 12px;
+    background-color: base.$warm-yellowish-brown;
+    border: none;
+  }
+
+  .seenon__text {
+    color: base.$text--beige;
+
+    display: grid;
+
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+
+    grid-column-gap: 1rem;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 0.1rem;
+      background-color: currentColor;
+    }
+  }
+
+  .seenon__logo img {
+    width: 10rem;
+    height: 2rem;
+  }
 }
 
 .top-relators {
@@ -173,7 +220,7 @@ body {
 
     .btn {
       padding: 1rem 2rem;
-      background-color: aqua;
+      background-color: base.$warm-yellowish-brown;
       border: none;
       border-radius: none;
     }

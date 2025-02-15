@@ -4,6 +4,15 @@
   font-weight: 300;
 }
 
+.heading-1 {
+  @extend %heading;
+  font-size: 4rem;
+}
+
+.text--white {
+  color: white;
+}
+
 .heading-2 {
   @extend %heading;
   font-size: 3rem;
@@ -12,5 +21,5 @@
 .heading-3 {
   @extend %heading;
   font-size: 1.5rem;
-  color: base.$color-yellow-normal;
+  color: base.$warm-yellowish-brown;
 }

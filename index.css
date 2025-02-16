@@ -54,10 +54,22 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
 }
+@media only screen and (max-width: 945px) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  }
+}
 
 .sidebar {
   background-color: red;
-  grid-row: 1/7;
+  grid-row: 1/-1;
+}
+@media only screen and (max-width: 945px) {
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
 }
 
 .header {
@@ -67,6 +79,11 @@ body {
   padding: 5rem;
   grid-template-rows: 1fr min-content minmax(min-content, max-content) 1fr max-content;
   grid-row-gap: 2rem;
+}
+@media only screen and (max-width: 945px) {
+  .header {
+    grid-column: full-start/full-end;
+  }
 }
 .header__logo {
   height: 2rem;
@@ -122,6 +139,11 @@ body {
   align-items: center;
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
+}
+@media only screen and (max-width: 945px) {
+  .top-relators .relator__list {
+    grid-column: full-start/full-end;
+  }
 }
 .top-relators img {
   width: 10rem;

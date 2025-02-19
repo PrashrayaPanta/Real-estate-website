@@ -6,6 +6,8 @@ $light-beige: #edeade;
 
 $text--beige: rgb(170, 170, 170);
 
+$larget-size: 945px;
+
 * {
   margin: 0px;
   padding: 0px;
@@ -15,6 +17,9 @@ $text--beige: rgb(170, 170, 170);
 html {
   /* 1rem = 10px; */
   font-size: 62.5%;
+  @media only screen and (max-width: $larget-size) {
+    font-size: 50%;
+  }
 }
 
 .mb-xs {

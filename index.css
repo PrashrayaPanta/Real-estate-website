@@ -9,6 +9,11 @@ html {
   /* 1rem = 10px; */
   font-size: 62.5%;
 }
+@media only screen and (max-width: 945px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 .mb-xs {
   margin-bottom: 1rem;
@@ -56,7 +61,7 @@ body {
 }
 @media only screen and (max-width: 945px) {
   .container {
-    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(3, min-content);
     grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
   }
 }
@@ -127,6 +132,12 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 1rem;
 }
+@media only screen and (max-width: 945px) {
+  .top-relators {
+    grid-row: 3/4;
+    grid-column: full-start/full-end;
+  }
+}
 .top-relators h3 {
   align-self: end;
   justify-self: center;
@@ -139,11 +150,6 @@ body {
   align-items: center;
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
-}
-@media only screen and (max-width: 945px) {
-  .top-relators .relator__list {
-    grid-column: full-start/full-end;
-  }
 }
 .top-relators img {
   width: 10rem;

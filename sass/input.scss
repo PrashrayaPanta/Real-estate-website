@@ -6,6 +6,10 @@
 
 $larget-size: 945px;
 
+$small-size: 600px;
+
+// $small-size: 500px;
+
 body {
   font-family: "Courier New", Courier, monospace;
   font-weight: 300;
@@ -135,7 +139,10 @@ body {
     grid-column-gap: 1rem;
     grid-row-gap: 2rem;
     @media only screen and (max-width: $larget-size) {
-      // grid-template-columns: min-content max-content min-content max-content min-content max-content;
+      grid-template-columns: min-content max-content min-content max-content min-content max-content;
+    }
+    @media only screen and (max-width: $small-size) {
+      grid-template-columns: min-content max-content;
     }
   }
 
@@ -253,6 +260,13 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
+    // @media only screen and (max-width: 800px) {
+    //   grid-column: 1/9;
+    // }
+
+    @media only screen and (max-width: $larget-size) {
+      grid-column: 1/-1;
+    }
   }
 
   &__img--1 {
@@ -282,6 +296,10 @@ body {
     justify-content: center;
     align-items: start;
     padding: 6rem 7vw;
+
+    @media only screen and (max-width: $larget-size) {
+      grid-row: 7/8;
+    }
 
     .btn {
       padding: 1rem 2rem;

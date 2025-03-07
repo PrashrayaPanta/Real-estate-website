@@ -9,7 +9,7 @@ html {
   /* 1rem = 10px; */
   font-size: 62.5%;
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 1200px) {
   html {
     font-size: 50%;
   }
@@ -57,23 +57,37 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 10rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  grid-template-columns: [sidebar-start] min-content [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 1200px) {
   .container {
-    grid-template-rows: 6rem 80vh min-content min-content 40vw repeat(3, min-content);
+    grid-template-rows: 5rem 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    grid-template-rows: 5rem calc(100vh - 5rem);
   }
 }
 
 .sidebar {
   background-color: red;
   grid-row: 1/-1;
+  font-size: 2rem;
 }
-@media only screen and (max-width: 945px) {
+.sidebar .about-us,
+.sidebar .testimionals {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
   .sidebar {
     grid-column: 1/-1;
     grid-row: 1/2;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
   }
 }
 
@@ -85,7 +99,7 @@ body {
   grid-template-rows: 1fr min-content minmax(min-content, max-content) 1fr max-content;
   grid-row-gap: 2rem;
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 800px) {
   .header {
     grid-column: full-start/full-end;
   }
@@ -117,11 +131,13 @@ body {
 .header .seenon__logos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: red;
   justify-items: center;
+  align-items: center;
 }
 .header .seenon__logos img {
-  width: 10rem;
-  height: 2rem;
+  max-width: 100%;
+  max-height: 2.5rem;
   filter: brightness(70%);
 }
 
@@ -132,10 +148,16 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 1rem;
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 800px) {
   .top-relators {
     grid-row: 3/4;
     grid-column: full-start/full-end;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .top-relators {
+    grid-template-rows: 1fr;
+    padding-top: 12px;
   }
 }
 .top-relators h3 {
@@ -151,7 +173,7 @@ body {
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 800px) {
   .top-relators .relator__list {
     grid-template-columns: min-content max-content min-content max-content min-content max-content;
   }
@@ -248,9 +270,10 @@ body {
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 800px) {
   .story__picture {
     grid-column: 1/-1;
+    padding: 3rem;
   }
 }
 .story__img--1 {
@@ -259,24 +282,36 @@ body {
   grid-column: 2/6;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 800px) {
+  .story__img--1 {
+    grid-column: 1/5;
+    grid-row: 1/-1;
+  }
+}
 .story__img--2 {
   width: 115%;
   grid-row: 4/6;
   grid-column: 4/7;
   z-index: 20;
 }
+@media only screen and (max-width: 800px) {
+  .story__img--2 {
+    grid-row: 1/-1;
+    width: 100%;
+  }
+}
 .story__content {
   grid-column: col-end 4/full-end;
-  background-color: blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   padding: 6rem 7vw;
 }
-@media only screen and (max-width: 945px) {
+@media only screen and (max-width: 800px) {
   .story__content {
-    grid-row: 7/8;
+    grid-column: full-start/full-end;
+    grid-row: 5/6;
   }
 }
 .story__content .btn {

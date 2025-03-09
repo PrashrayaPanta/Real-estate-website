@@ -6,14 +6,50 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css" />
   </head>
+
   <body class="container">
     <div class="sidebar">
-      <div>Home</div>
-      <div>About</div>
-      <!-- <div class="about-us">About us</div>
-      <div class="testimionals">Testimionals</div> -->
-      <div>Services</div>
-      <div>Hello3</div>
+      <!-- <div class="test"></div> -->
+
+      <nav>
+        <ul class="sidebar__lists" style="list-style-type: none">
+          <li style="">
+            <a
+              href="#"
+              onclick="showFunction()"
+              style="text-decoration: none; color: inherit; padding-left: 40px"
+            >
+              About
+            </a>
+
+            <!-- Submenu inside the same <li> -->
+            <ul
+              class="sidebar__menu"
+              style="
+                position: absolute;
+                list-style-type: none;
+                background-color: white;
+                top: 5%;
+              "
+            >
+              <li class="sidebar__item">
+                <a
+                  href="./about.html"
+                  style="text-decoration: none; color: inherit"
+                  >About us</a
+                >
+              </li>
+              <li class="sidebar__item">
+                <a
+                  href="./testimonials.html"
+                  style="text-decoration: none; color: inherit"
+                  >Testimonial</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
     <div class="header">
       <img
@@ -132,6 +168,7 @@
         class="story__img--2"
       />
     </div>
+
     <div class="story__content">
       <h3 class="heading-3 mb-xs">HAPPY CUSTOMERS</h3>
       <h2 class="heading-2 mb-sm">
@@ -350,6 +387,7 @@
         <button class="home__button">contact Relators</button>
       </div>
     </div>
+
     <div class="img__galleries">Image galleries</div>
     <footer class="footer">
       <ul class="nav">
@@ -380,4 +418,24 @@
       </div>
     </footer>
   </body>
+
+  <script>
+    function showfunction() {
+      console.log("Inside show function");
+
+      // const boxElement = document.createElement("div");
+
+      // boxElement.innerHTML = `<h1>This is inside div</h1>`;
+
+      // const hyperElement = document.querySelector(".test");
+
+      // boxElement.append(hyperElement);
+
+      // hyperElement.append(boxElement);
+    }
+
+    // console.log(event);
+
+    // Prevents navigation
+  </script>
 </html>

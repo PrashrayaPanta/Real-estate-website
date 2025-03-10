@@ -25,7 +25,10 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns:
-    [sidebar-start] 15rem [sidebar-end full-start] minmax(3rem, 1fr)
+    [sidebar-start] minmax(12rem, 22rem) [sidebar-end full-start] minmax(
+      3rem,
+      1fr
+    )
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
     minmax(3rem, 1fr) [full-end];
@@ -50,9 +53,15 @@ body {
   grid-row: 1/-1;
   font-size: 2rem;
 
-  .about-us,
-  .testimionals {
-    display: none;
+  &__menu {
+    position: absolute;
+    list-style-type: none;
+    background-color: white;
+    top: 5%;
+
+    &-none {
+      display: none;
+    }
   }
 
   @media only screen and (max-width: $bp-large) {

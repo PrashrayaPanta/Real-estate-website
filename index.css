@@ -57,7 +57,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 15rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  grid-template-columns: [sidebar-start] minmax(12rem, 22rem) [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 1200px) {
   .container {
@@ -76,8 +76,13 @@ body {
   grid-row: 1/-1;
   font-size: 2rem;
 }
-.sidebar .about-us,
-.sidebar .testimionals {
+.sidebar__menu {
+  position: absolute;
+  list-style-type: none;
+  background-color: white;
+  top: 5%;
+}
+.sidebar__menu-none {
   display: none;
 }
 @media only screen and (max-width: 1200px) {

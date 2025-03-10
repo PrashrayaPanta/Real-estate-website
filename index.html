@@ -12,38 +12,30 @@
       <!-- <div class="test"></div> -->
 
       <nav>
-        <ul class="sidebar__lists" style="list-style-type: none">
-          <li style="">
+        <ul class="sidebar__lists" style="list-style-type: none" id="lists">
+          <li id="sidebar__anchor">
             <a
               href="#"
-              onclick="showFunction()"
-              style="text-decoration: none; color: inherit; padding-left: 40px"
+              onclick="showHiddenMenuItems()"
+              style="text-decoration: none; color: inherit"
             >
               About
             </a>
 
             <!-- Submenu inside the same <li> -->
-            <ul
-              class="sidebar__menu"
-              style="
-                position: absolute;
-                list-style-type: none;
-                background-color: white;
-                top: 5%;
-              "
-            >
+            <ul class="sidebar__menu sidebar__menu-none">
               <li class="sidebar__item">
                 <a
                   href="./about.html"
                   style="text-decoration: none; color: inherit"
-                  >About us</a
-                >
+                  >About
+                </a>
               </li>
               <li class="sidebar__item">
                 <a
                   href="./testimonials.html"
                   style="text-decoration: none; color: inherit"
-                  >Testimonial</a
+                  >Testimonials</a
                 >
               </li>
             </ul>
@@ -420,22 +412,16 @@
   </body>
 
   <script>
-    function showfunction() {
-      console.log("Inside show function");
+    function showHiddenMenuItems() {
+      const sidebarMenuElement = document.querySelector(".sidebar__menu");
 
-      // const boxElement = document.createElement("div");
+      if (sidebarMenuElement.classList.contains("sidebar__menu-none")) {
+        sidebarMenuElement.classList.remove("sidebar__menu-none");
+      } else {
+        sidebarMenuElement.classList.add("sidebar__menu-none");
+      }
 
-      // boxElement.innerHTML = `<h1>This is inside div</h1>`;
-
-      // const hyperElement = document.querySelector(".test");
-
-      // boxElement.append(hyperElement);
-
-      // hyperElement.append(boxElement);
+      // console.log(sidebarMenuElement);
     }
-
-    // console.log(event);
-
-    // Prevents navigation
   </script>
 </html>

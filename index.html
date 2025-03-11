@@ -8,33 +8,53 @@
   </head>
 
   <body class="container">
-    <div class="sidebar">
-      <!-- <div class="test"></div> -->
-
+    <div class="sidebar" style="background-color: blue">
       <nav>
         <ul class="sidebar__lists" style="list-style-type: none" id="lists">
-          <li id="sidebar__anchor">
+          <li
+            id="sidebar__anchor"
+            style="background-color: bisque; position: relative"
+          >
             <a
               href="#"
-              onclick="showHiddenMenuItems()"
-              style="text-decoration: none; color: inherit"
+              onclick="showHideMenuItems()"
+              style="
+                text-decoration: none;
+                color: inherit;
+                background-color: yellow;
+                display: block;
+                text-align: center;
+              "
             >
               About
             </a>
 
             <!-- Submenu inside the same <li> -->
-            <ul class="sidebar__menu sidebar__menu-none">
+            <ul
+              class="sidebar__menu sidebar__menu-none"
+              style="background-color: greenyellow"
+            >
               <li class="sidebar__item">
                 <a
                   href="./about.html"
-                  style="text-decoration: none; color: inherit"
+                  style="
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    text-align: center;
+                  "
                   >About
                 </a>
               </li>
               <li class="sidebar__item">
                 <a
                   href="./testimonials.html"
-                  style="text-decoration: none; color: inherit"
+                  style="
+                    text-decoration: none;
+                    color: inherit;
+                    display: block;
+                    text-align: center;
+                  "
                   >Testimonials</a
                 >
               </li>
@@ -412,7 +432,7 @@
   </body>
 
   <script>
-    function showHiddenMenuItems() {
+    function showHideMenuItems() {
       const sidebarMenuElement = document.querySelector(".sidebar__menu");
 
       if (sidebarMenuElement.classList.contains("sidebar__menu-none")) {
@@ -420,8 +440,6 @@
       } else {
         sidebarMenuElement.classList.add("sidebar__menu-none");
       }
-
-      // console.log(sidebarMenuElement);
     }
   </script>
 </html>

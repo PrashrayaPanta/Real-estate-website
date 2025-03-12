@@ -83,21 +83,14 @@
       </nav>
     </div>
     <div class="header">
-      <img
-        src="./Images/logo.png"
-        alt="Header Logo"
-        srcset=""
-        class="header__logo"
-      />
-      <h3 class="heading-3">Your Own Home</h3>
-      <h1 class="heading-1 text--white">The Ultimate personal freedom</h1>
-      <button class="btn text--white">View Our Properties</button>
-      <div class="seenon__text">Seen On</div>
-      <div class="seenon__logos">
-        <img src="./Images/logo-bbc.png" alt="" />
-        <img src="./Images/logo-bi.png" alt="" />
-        <img src="./Images/logo-forbes.png" alt="" />
-        <img src="./Images/logo-techcrunch.png" alt="" />
+      <div class="slider-container">
+        <div class="slider">
+          <img src="./Images/gal-1.jpeg" class="slide" alt="Image 1" />
+          <img src="./Images/gal-10.jpeg" class="slide" alt="Image 2" />
+          <img src="./Images/gal-11.jpeg" class="slide" alt="Image 3" />
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
       </div>
     </div>
     <div class="top-relators">
@@ -475,6 +468,25 @@
       } else {
         sidebarMenuElement.classList.add("sidebar__services__menu-none");
       }
+    }
+
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+
+    function showSlide(i) {
+      index = (i + totalSlides) % totalSlides; // Handle wrap-around
+      document.querySelector(".slider").style.transform = `translateX(-${
+        index * 100
+      }%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
     }
   </script>
 </html>

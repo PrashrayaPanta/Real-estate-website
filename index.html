@@ -8,16 +8,16 @@
   </head>
 
   <body class="container">
-    <div class="sidebar" style="background-color: blue">
+    <div class="sidebar">
       <nav>
         <ul class="sidebar__lists" style="list-style-type: none" id="lists">
           <li
-            id="sidebar__anchor"
-            style="background-color: bisque; position: relative"
+            id="sidebar__anchorplussubmenu1"
+            style="position: relative; background-color: yellow"
           >
             <a
               href="#"
-              onclick="showHideMenuItems()"
+              onclick="showHideAboutMenu()"
               style="
                 text-decoration: none;
                 color: inherit;
@@ -31,31 +31,50 @@
 
             <!-- Submenu inside the same <li> -->
             <ul
-              class="sidebar__menu sidebar__menu-none"
+              class="sidebar__about__menu sidebar__about__menu-none"
               style="background-color: greenyellow"
             >
               <li class="sidebar__item">
-                <a
-                  href="./about.html"
-                  style="
-                    text-decoration: none;
-                    color: inherit;
-                    display: block;
-                    text-align: center;
-                  "
-                  >About
+                <a href="./about.html" class="sidebar__item__anchor">About </a>
+              </li>
+              <li class="sidebar__item">
+                <a href="./testimonials.html" class="sidebar__item__anchor"
+                  >Testimonials</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            id="sidebar__anchorplussubmenu2"
+            style="position: relative; background-color: yellow"
+          >
+            <a
+              href="#"
+              onclick="showHideServiceMenu()"
+              style="
+                text-decoration: none;
+                color: inherit;
+                background-color: yellow;
+                display: block;
+                text-align: center;
+              "
+            >
+              Services
+            </a>
+
+            <!-- Submenu inside the same <li> -->
+            <ul
+              class="sidebar__services__menu sidebar__services__menu-none"
+              style="background-color: greenyellow"
+            >
+              <li class="sidebar__item">
+                <a href="./about.html" class="sidebar__item__anchor"
+                  >Web Design
                 </a>
               </li>
               <li class="sidebar__item">
-                <a
-                  href="./testimonials.html"
-                  style="
-                    text-decoration: none;
-                    color: inherit;
-                    display: block;
-                    text-align: center;
-                  "
-                  >Testimonials</a
+                <a href="./testimonials.html" class="sidebar__item__anchor"
+                  >Web app</a
                 >
               </li>
             </ul>
@@ -432,13 +451,29 @@
   </body>
 
   <script>
-    function showHideMenuItems() {
-      const sidebarMenuElement = document.querySelector(".sidebar__menu");
+    function showHideAboutMenu() {
+      const sidebarMenuElement = document.querySelector(
+        ".sidebar__about__menu"
+      );
 
-      if (sidebarMenuElement.classList.contains("sidebar__menu-none")) {
-        sidebarMenuElement.classList.remove("sidebar__menu-none");
+      if (sidebarMenuElement.classList.contains("sidebar__about__menu-none")) {
+        sidebarMenuElement.classList.remove("sidebar__about__menu-none");
       } else {
-        sidebarMenuElement.classList.add("sidebar__menu-none");
+        sidebarMenuElement.classList.add("sidebar__about__menu-none");
+      }
+    }
+
+    function showHideServiceMenu() {
+      const sidebarMenuElement = document.querySelector(
+        ".sidebar__services__menu"
+      );
+      console.log(sidebarMenuElement);
+      if (
+        sidebarMenuElement.classList.contains("sidebar__services__menu-none")
+      ) {
+        sidebarMenuElement.classList.remove("sidebar__services__menu-none");
+      } else {
+        sidebarMenuElement.classList.add("sidebar__services__menu-none");
       }
     }
   </script>

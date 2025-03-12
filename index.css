@@ -76,18 +76,44 @@ body {
   grid-row: 1/-1;
   font-size: 2rem;
 }
-.sidebar__menu {
+.sidebar__item__anchor {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .sidebar__lists {
+    display: flex;
+    gap: 15rem;
+  }
+}
+.sidebar__about__menu {
   list-style-type: none;
   background-color: white;
 }
 @media only screen and (max-width: 1200px) {
-  .sidebar__menu {
+  .sidebar__about__menu {
     position: absolute;
     left: -80%;
     padding: 1rem;
   }
 }
-.sidebar__menu-none {
+.sidebar__about__menu-none {
+  display: none;
+}
+.sidebar__services__menu {
+  list-style-type: none;
+  background-color: white;
+}
+@media only screen and (max-width: 1200px) {
+  .sidebar__services__menu {
+    position: absolute;
+    left: -20%;
+    width: max-content;
+    padding: 1rem;
+  }
+}
+.sidebar__services__menu-none {
   display: none;
 }
 @media only screen and (max-width: 1200px) {

@@ -50,13 +50,45 @@ body {
   grid-row: 1/-1;
   font-size: 2rem;
 
-  &__menu {
+  &__item__anchor {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  &__lists {
+    @media only screen and (max-width: $bp-large) {
+      display: flex;
+      gap: 15rem;
+    }
+  }
+
+  &__anchor {
+  }
+
+  &__about__menu {
     list-style-type: none;
     background-color: white;
 
     @media only screen and (max-width: $bp-large) {
       position: absolute;
       left: -80%;
+      padding: 1rem;
+    }
+
+    &-none {
+      display: none;
+    }
+  }
+
+  &__services__menu {
+    list-style-type: none;
+    background-color: white;
+
+    @media only screen and (max-width: $bp-large) {
+      position: absolute;
+      left: -20%;
+      width: max-content;
       padding: 1rem;
     }
 

@@ -15,5 +15,8 @@
     "url": "https://github.com/PrashrayaPanta/Real-estate-website/issues"
   },
   "homepage": "https://github.com/PrashrayaPanta/Real-estate-website#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
 }

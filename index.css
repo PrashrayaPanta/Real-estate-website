@@ -133,6 +133,7 @@ body {
   display: grid;
   justify-items: center;
   padding: 5rem;
+  padding-top: 8rem;
 }
 .header .slider-container {
   position: relative;

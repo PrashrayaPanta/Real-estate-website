@@ -1,383 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  </head>
 
-  <body class="container">
-    <div class="sidebar">
-      <nav>
-        <ul class="sidebar__lists" style="list-style-type: none" id="lists">
-          <li
-            id="sidebar__anchorplussubmenu1"
-            style="position: relative; background-color: yellow"
-          >
-            <a
-              href="#"
-              onclick="showHideAboutMenu()"
-              style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="container">
+
+  <div class="sidebar">
+    <nav>
+
+      <ul class="sidebar__lists" style="list-style-type: none" id="lists">
+        <li id="sidebar__anchorplussubmenu1" style="position: relative; background-color: yellow">
+          <a href="#" onclick="showHideAboutMenu()" style="
                 text-decoration: none;
                 color: inherit;
                 background-color: yellow;
                 display: block;
                 text-align: center;
-              "
-            >
-              About
-            </a>
+              ">
+            About
+          </a>
 
-            <!-- Submenu inside the same <li> -->
-            <ul
-              class="sidebar__about__menu sidebar__about__menu-none"
-              style="background-color: greenyellow"
-            >
-              <li class="sidebar__item">
-                <a href="./about.html" class="sidebar__item__anchor">About </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="./testimonials.html" class="sidebar__item__anchor"
-                  >Testimonials</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li
-            id="sidebar__anchorplussubmenu2"
-            style="position: relative; background-color: yellow"
-          >
-            <a
-              href="#"
-              onclick="showHideServiceMenu()"
-              style="
+          <!-- Submenu inside the same <li> -->
+          <ul class="sidebar__about__menu sidebar__about__menu-none" style="background-color: greenyellow">
+            <li class="sidebar__item">
+              <a href="./about.html" class="sidebar__item__anchor">About </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="./testimonials.html" class="sidebar__item__anchor">Testimonials</a>
+            </li>
+          </ul>
+        </li>
+        <li id="sidebar__anchorplussubmenu2" style="position: relative; background-color: yellow">
+          <a href="#" onclick="showHideServiceMenu()" style="
                 text-decoration: none;
                 color: inherit;
                 background-color: yellow;
                 display: block;
                 text-align: center;
-              "
-            >
-              Services
-            </a>
+              ">
+            Services
+          </a>
 
-            <!-- Submenu inside the same <li> -->
-            <ul
-              class="sidebar__services__menu sidebar__services__menu-none"
-              style="background-color: greenyellow"
-            >
-              <li class="sidebar__item">
-                <a href="./about.html" class="sidebar__item__anchor"
-                  >Web Design
-                </a>
-              </li>
-              <li class="sidebar__item">
-                <a href="./testimonials.html" class="sidebar__item__anchor"
-                  >Web app</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+          <!-- Submenu inside the same <li> -->
+          <ul class="sidebar__services__menu sidebar__services__menu-none" style="background-color: greenyellow">
+            <li class="sidebar__item">
+              <a href="./about.html" class="sidebar__item__anchor">Web Design
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="./testimonials.html" class="sidebar__item__anchor">Web app</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="header">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="./Images/gal-1.jpeg" class="slide" alt="Image 1" />
+        <img src="./Images/gal-10.jpeg" class="slide" alt="Image 2" />
+        <img src="./Images/gal-11.jpeg" class="slide" alt="Image 3" />
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
-    <div class="header">
-      <div class="slider-container">
-        <div class="slider">
-          <img src="./Images/gal-1.jpeg" class="slide" alt="Image 1" />
-          <img src="./Images/gal-10.jpeg" class="slide" alt="Image 2" />
-          <img src="./Images/gal-11.jpeg" class="slide" alt="Image 3" />
-        </div>
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  <div class="top-relators">
+    <h3 class="heading-3">Top 3 Realtors</h3>
+
+    <div class="relator__list">
+      <img src="./Images/realtor-1.jpeg" alt="" srcset="" />
+      <div class="realtor__details">
+        <h4 class="heading-4 text--white">Erik Feinman</h4>
+        <p class="relator__sold">245 houses sold</p>
+      </div>
+      <img src="./Images/realtor-2.jpeg" alt="" srcset="" />
+      <div class="realtor__details">
+        <h4 class="heading-4 text--white">Kim Brawn</h4>
+        <p class="relator__sold">245 houses sold</p>
+      </div>
+      <img src="./Images/realtor-3.jpeg" alt="" srcset="" />
+      <div class="realtor__details">
+        <h4 class="heading-4 text--white">Toby Ramse</h4>
+        <p class="relator__sold">245 houses sold</p>
       </div>
     </div>
-    <div class="top-relators">
-      <h3 class="heading-3">Top 3 Realtors</h3>
+  </div>
 
-      <div class="relator__list">
-        <img src="./Images/realtor-1.jpeg" alt="" srcset="" />
-        <div class="realtor__details">
-          <h4 class="heading-4 text--white">Erik Feinman</h4>
-          <p class="relator__sold">245 houses sold</p>
-        </div>
-        <img src="./Images/realtor-2.jpeg" alt="" srcset="" />
-        <div class="realtor__details">
-          <h4 class="heading-4 text--white">Kim Brawn</h4>
-          <p class="relator__sold">245 houses sold</p>
-        </div>
-        <img src="./Images/realtor-3.jpeg" alt="" srcset="" />
-        <div class="realtor__details">
-          <h4 class="heading-4 text--white">Toby Ramse</h4>
-          <p class="relator__sold">245 houses sold</p>
-        </div>
-      </div>
+  <div class="features" data-aos="fade-up" data-aos-delay="200">
+    <div class="feature">
+      <svg class="feature__icon">
+        <use xlink:href="./sprite.svg#icon-sphere"></use>
+      </svg>
+      <h3>Worlds best luxury home</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+        distinctio necessitatibus pariatur voluptatibus.
+      </p>
     </div>
+    <div class="feature">
+      <svg class="feature__icon">
+        <use xlink:href="./sprite.svg#icon-location2"></use>
+      </svg>
+      <h3>All home in top location</h3>
+      <p>
+        Tenetur distinctio necessitatibus pariatur voluptatibus quidem
+        consequatur harum.
+      </p>
+    </div>
+    <div class="feature">
+      <svg class="feature__icon">
+        <use xlink:href="./sprite.svg#icon-lock"></use>
+      </svg>
+      <h3>Secured Payment on ghar pauni thau</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+        distinctio necessitatibus pariatur voluptatibus.
+      </p>
+    </div>
+    <div class="feature">
+      <svg class="feature__icon">
+        <use xlink:href="./sprite.svg#icon-presentation"></use>
+      </svg>
+      <h3>Top 1% relators</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+        distinctio necessitatibus pariatur voluptatibus.
+      </p>
+    </div>
+    <div class="feature">
+      <svg class="feature__icon">
+        <use xlink:href="./sprite.svg#icon-trophy"></use>
+      </svg>
+      <h3>Only best propetries</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+        distinctio necessitatibus pariatur voluptatibus.
+      </p>
+    </div>
+    <div class="feature">
+      <svg class="feature__icon">
+        <use xlink:href="./sprite.svg#icon-key"></use>
+      </svg>
+      <h3>New home in one week</h3>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
+        distinctio necessitatibus pariatur voluptatibus.
+      </p>
+    </div>
+  </div>
 
-    <div class="features" data-aos="fade-up" data-aos-delay="200">
-      <div class="feature">
-        <svg class="feature__icon">
-          <use xlink:href="./sprite.svg#icon-sphere"></use>
-        </svg>
-        <h3>Worlds best luxury home</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          distinctio necessitatibus pariatur voluptatibus.
-        </p>
-      </div>
-      <div class="feature">
-        <svg class="feature__icon">
+  <div class="story__picture">
+    <img src="https://nexter.netlify.app/img/story-1.jpeg" alt="Couple with new house" srcset=""
+      class="story__img--1" />
+    <img src="https://nexter.netlify.app/img/story-2.jpeg" alt="New House" srcset="" class="story__img--2" />
+  </div>
+
+  <div class="story__content">
+    <h3 class="heading-3 mb-xs">HAPPY CUSTOMERS</h3>
+    <h2 class="heading-2 mb-sm">
+      &ldquo;The best decision of my lives&ldquo;
+    </h2>
+    <p class="mb-sm story__text">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
+      veritatis?
+    </p>
+    <button class="btn">Find Your Own Home</button>
+  </div>
+
+
+
+
+  <div class="homes">
+
+
+
+    <i class="fa-solid fa-refresh fa-spin" style="width: 22px;display: block;margin: 0 auto;"></i>
+
+
+
+    <!-- <div class=" home">
+      <img src="./Images/house-2.jpeg" alt="Beautiful Family House" srcset="" class="home__image" />
+      <h5 class="home__name">Beautiful Family House</h5>
+      <div class="home__location">
+        <svg class="home__icon">
           <use xlink:href="./sprite.svg#icon-location2"></use>
         </svg>
-        <h3>All home in top location</h3>
-        <p>
-          Tenetur distinctio necessitatibus pariatur voluptatibus quidem
-          consequatur harum.
-        </p>
+        <p>USA</p>
       </div>
-      <div class="feature">
-        <svg class="feature__icon">
-          <use xlink:href="./sprite.svg#icon-lock"></use>
+      <div class="home__roomcounts">
+        <svg class="home__icon">
+          <use xlink:href="./sprite.svg#icon-user"></use>
         </svg>
-        <h3>Secured Payment on ghar pauni thau</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          distinctio necessitatibus pariatur voluptatibus.
-        </p>
+        <p>5 rooms</p>
       </div>
-      <div class="feature">
-        <svg class="feature__icon">
-          <use xlink:href="./sprite.svg#icon-presentation"></use>
+      <div class="home__area">
+        <svg class="home__icon">
+          <use xlink:href="./sprite.svg#icon-expand"></use>
         </svg>
-        <h3>Top 1% relators</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          distinctio necessitatibus pariatur voluptatibus.
-        </p>
+        <p>325m<sup>2</sup></p>
       </div>
-      <div class="feature">
-        <svg class="feature__icon">
-          <use xlink:href="./sprite.svg#icon-trophy"></use>
-        </svg>
-        <h3>Only best propetries</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          distinctio necessitatibus pariatur voluptatibus.
-        </p>
-      </div>
-      <div class="feature">
-        <svg class="feature__icon">
+      <div class="home__price">
+        <svg class="home__icon">
           <use xlink:href="./sprite.svg#icon-key"></use>
         </svg>
-        <h3>New home in one week</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          distinctio necessitatibus pariatur voluptatibus.
-        </p>
+        <p>$1,200,000</p>
       </div>
+      <button class="home__button">contact Relators</button>
+  </div>
+  <div class="home">
+    <img src="./Images/house-3.jpeg" alt="Beautiful Family House" srcset="" class="home__image" />
+    <h5 class="home__name">Beautiful Family House</h5>
+    <div class="home__location">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-location2"></use>
+      </svg>
+      <p>USA</p>
     </div>
-
-    <div class="story__picture">
-      <img
-        src="https://nexter.netlify.app/img/story-1.jpeg"
-        alt="Couple with new house"
-        srcset=""
-        class="story__img--1"
-      />
-      <img
-        src="https://nexter.netlify.app/img/story-2.jpeg"
-        alt="New House"
-        srcset=""
-        class="story__img--2"
-      />
+    <div class="home__roomcounts">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-user"></use>
+      </svg>
+      <p>5 rooms</p>
     </div>
-
-    <div class="story__content">
-      <h3 class="heading-3 mb-xs">HAPPY CUSTOMERS</h3>
-      <h2 class="heading-2 mb-sm">
-        &ldquo;The best decision of my lives&ldquo;
-      </h2>
-      <p class="mb-sm story__text">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci,
-        veritatis?
-      </p>
-      <button class="btn">Find Your Own Home</button>
+    <div class="home__area">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-expand"></use>
+      </svg>
+      <p>325m<sup>2</sup></p>
     </div>
-
-    <div class="homes" data-aos="fade-left" data-aos-delay="200">
-      <!-- <div class="home">
-        <img
-          src="./Images/house-2.jpeg"
-          alt="Beautiful Family House"
-          srcset=""
-          class="home__image"
-        />
-        <h5 class="home__name">Beautiful Family House</h5>
-        <div class="home__location">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-location2"></use>
-          </svg>
-          <p>USA</p>
-        </div>
-        <div class="home__roomcounts">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-user"></use>
-          </svg>
-          <p>5 rooms</p>
-        </div>
-        <div class="home__area">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-expand"></use>
-          </svg>
-          <p>325m<sup>2</sup></p>
-        </div>
-        <div class="home__price">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-key"></use>
-          </svg>
-          <p>$1,200,000</p>
-        </div>
-        <button class="home__button">contact Relators</button>
-      </div>
-      <div class="home">
-        <img
-          src="./Images/house-3.jpeg"
-          alt="Beautiful Family House"
-          srcset=""
-          class="home__image"
-        />
-        <h5 class="home__name">Beautiful Family House</h5>
-        <div class="home__location">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-location2"></use>
-          </svg>
-          <p>USA</p>
-        </div>
-        <div class="home__roomcounts">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-user"></use>
-          </svg>
-          <p>5 rooms</p>
-        </div>
-        <div class="home__area">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-expand"></use>
-          </svg>
-          <p>325m<sup>2</sup></p>
-        </div>
-        <div class="home__price">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-key"></use>
-          </svg>
-          <p>$1,200,000</p>
-        </div>
-        <button class="home__button">contact Relators</button>
-      </div>
-      <div class="home">
-        <img
-          src="./Images/house-4.jpeg"
-          alt="Beautiful Family House"
-          srcset=""
-          class="home__image"
-        />
-        <h5 class="home__name">Beautiful Family House</h5>
-        <div class="home__location">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-location2"></use>
-          </svg>
-          <p>USA</p>
-        </div>
-        <div class="home__roomcounts">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-user"></use>
-          </svg>
-          <p>5 rooms</p>
-        </div>
-        <div class="home__area">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-expand"></use>
-          </svg>
-          <p>325m<sup>2</sup></p>
-        </div>
-        <div class="home__price">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-key"></use>
-          </svg>
-          <p>$1,200,000</p>
-        </div>
-        <button class="home__button">contact Relators</button>
-      </div>
-      <div class="home">
-        <img
-          src="./Images/house-5.jpeg"
-          alt="Beautiful Family House"
-          srcset=""
-          class="home__image"
-        />
-        <h5 class="home__name">Beautiful Family House</h5>
-        <div class="home__location">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-location2"></use>
-          </svg>
-          <p>USA</p>
-        </div>
-        <div class="home__roomcounts">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-user"></use>
-          </svg>
-          <p>5 rooms</p>
-        </div>
-        <div class="home__area">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-expand"></use>
-          </svg>
-          <p>325m<sup>2</sup></p>
-        </div>
-        <div class="home__price">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-key"></use>
-          </svg>
-          <p>$1,200,000</p>
-        </div>
-        <button class="home__button">contact Relators</button>
-      </div>
-      <div class="home">
-        <img
-          src="./Images/house-6.jpeg"
-          alt="Beautiful Family House"
-          srcset=""
-          class="home__image"
-        />
-        <h5 class="home__name">Beautiful Family House</h5>
-        <div class="home__location">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-location2"></use>
-          </svg>
-          <p>USA</p>
-        </div>
-        <div class="home__roomcounts">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-user"></use>
-          </svg>
-          <p>5 rooms</p>
-        </div>
-        <div class="home__area">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-expand"></use>
-          </svg>
-          <p>325m<sup>2</sup></p>
-        </div>
-        <div class="home__price">
-          <svg class="home__icon">
-            <use xlink:href="./sprite.svg#icon-key"></use>
-          </svg>
-          <p>$1,200,000</p>
-        </div>
-        <button class="home__button">contact Relators</button>
-      </div> -->
-      <!-- <div class="home">
+    <div class="home__price">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-key"></use>
+      </svg>
+      <p>$1,200,000</p>
+    </div>
+    <button class="home__button">contact Relators</button>
+  </div>
+  <div class="home">
+    <img src="./Images/house-4.jpeg" alt="Beautiful Family House" srcset="" class="home__image" />
+    <h5 class="home__name">Beautiful Family House</h5>
+    <div class="home__location">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-location2"></use>
+      </svg>
+      <p>USA</p>
+    </div>
+    <div class="home__roomcounts">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-user"></use>
+      </svg>
+      <p>5 rooms</p>
+    </div>
+    <div class="home__area">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-expand"></use>
+      </svg>
+      <p>325m<sup>2</sup></p>
+    </div>
+    <div class="home__price">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-key"></use>
+      </svg>
+      <p>$1,200,000</p>
+    </div>
+    <button class="home__button">contact Relators</button>
+  </div>
+  <div class="home">
+    <img src="./Images/house-5.jpeg" alt="Beautiful Family House" srcset="" class="home__image" />
+    <h5 class="home__name">Beautiful Family House</h5>
+    <div class="home__location">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-location2"></use>
+      </svg>
+      <p>USA</p>
+    </div>
+    <div class="home__roomcounts">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-user"></use>
+      </svg>
+      <p>5 rooms</p>
+    </div>
+    <div class="home__area">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-expand"></use>
+      </svg>
+      <p>325m<sup>2</sup></p>
+    </div>
+    <div class="home__price">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-key"></use>
+      </svg>
+      <p>$1,200,000</p>
+    </div>
+    <button class="home__button">contact Relators</button>
+  </div>
+  <div class="home">
+    <img src="./Images/house-6.jpeg" alt="Beautiful Family House" srcset="" class="home__image" />
+    <h5 class="home__name">Beautiful Family House</h5>
+    <div class="home__location">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-location2"></use>
+      </svg>
+      <p>USA</p>
+    </div>
+    <div class="home__roomcounts">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-user"></use>
+      </svg>
+      <p>5 rooms</p>
+    </div>
+    <div class="home__area">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-expand"></use>
+      </svg>
+      <p>325m<sup>2</sup></p>
+    </div>
+    <div class="home__price">
+      <svg class="home__icon">
+        <use xlink:href="./sprite.svg#icon-key"></use>
+      </svg>
+      <p>$1,200,000</p>
+    </div>
+    <button class="home__button">contact Relators</button>
+  </div> -->
+    <!-- <div class="home">
         <img
           src="./Images/house-2.jpeg"
           alt="Modern Glass Villa"
@@ -547,196 +503,288 @@
         </div>
         <button class="home__button">contact Relators</button>
       </div> -->
+
+  </div>
+
+  <div class="img__galleries">Image galleries</div>
+  <footer class="footer">
+    <ul class="nav">
+      <li class="nav__item">
+        <a href="" class="nav__link">find your dream home</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Request Proposal</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Download home planner</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Contact Us</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Submit your property</a>
+      </li>
+      <li class="nav__item">
+        <a href="" class="nav__link">Come work with us</a>
+      </li>
+    </ul>
+    <div class="copyright">
+      copyrightklsdjgliajsilfgknasjkdhgkjasfhdngkjbasfhkughabjksdgbaksudhgbafjksdhgbajksdvbkufhjb
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+      quasi tempora vitae dolorum libero ipsam alias ea voluptates, est
+      doloribus?]
     </div>
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <div class="img__galleries">Image galleries</div>
-    <footer class="footer">
-      <ul class="nav">
-        <li class="nav__item">
-          <a href="" class="nav__link">find your dream home</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link">Request Proposal</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link">Download home planner</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link">Contact Us</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link">Submit your property</a>
-        </li>
-        <li class="nav__item">
-          <a href="" class="nav__link">Come work with us</a>
-        </li>
-      </ul>
-      <div class="copyright">
-        copyrightklsdjgliajsilfgknasjkdhgkjasfhdngkjbasfhkughabjksdgbaksudhgbafjksdhgbajksdvbkufhjb
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-        quasi tempora vitae dolorum libero ipsam alias ea voluptates, est
-        doloribus?]
-      </div>
-    </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script>
-      function showHideAboutMenu() {
-        const sidebarMenuElement = document.querySelector(
-          ".sidebar__about__menu"
-        );
+  <script>
+    AOS.init();
+    function showHideAboutMenu() {
+      const sidebarMenuElement = document.querySelector(
+        ".sidebar__about__menu"
+      );
 
-        if (
-          sidebarMenuElement.classList.contains("sidebar__about__menu-none")
-        ) {
-          sidebarMenuElement.classList.remove("sidebar__about__menu-none");
-        } else {
-          sidebarMenuElement.classList.add("sidebar__about__menu-none");
-        }
+      if (
+        sidebarMenuElement.classList.contains("sidebar__about__menu-none")
+      ) {
+        sidebarMenuElement.classList.remove("sidebar__about__menu-none");
+      } else {
+        sidebarMenuElement.classList.add("sidebar__about__menu-none");
       }
+    }
 
-      function showHideServiceMenu() {
-        const sidebarMenuElement = document.querySelector(
-          ".sidebar__services__menu"
-        );
-        console.log(sidebarMenuElement);
-        if (
-          sidebarMenuElement.classList.contains("sidebar__services__menu-none")
-        ) {
-          sidebarMenuElement.classList.remove("sidebar__services__menu-none");
-        } else {
-          sidebarMenuElement.classList.add("sidebar__services__menu-none");
-        }
+    function showHideServiceMenu() {
+      const sidebarMenuElement = document.querySelector(
+        ".sidebar__services__menu"
+      );
+      console.log(sidebarMenuElement);
+      if (
+        sidebarMenuElement.classList.contains("sidebar__services__menu-none")
+      ) {
+        sidebarMenuElement.classList.remove("sidebar__services__menu-none");
+      } else {
+        sidebarMenuElement.classList.add("sidebar__services__menu-none");
       }
+    }
 
-      let index = 0;
-      const slides = document.querySelectorAll(".slide");
-      const totalSlides = slides.length;
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
 
-      function showSlide(i) {
-        index = (i + totalSlides) % totalSlides; // Handle wrap-around
-        document.querySelector(".slider").style.transform = `translateX(-${
-          index * 100
+    function showSlide(i) {
+      index = (i + totalSlides) % totalSlides; // Handle wrap-around
+      document.querySelector(".slider").style.transform = `translateX(-${index * 100
         }%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+
+
+
+
+    const Houses = [
+      {
+        "HouseName": "Beautiful Family House",
+        "imgUrlLocal": "./images/house-1.jpeg",
+        "country": "USA",
+        "noOfRooms": 5,
+        "area": "325m²",
+        "price": "$1,200,000"
+      },
+      {
+        "HouseName": "Modern Glass Villa",
+        "imgUrlLocal": "./images/house-2.jpeg",
+        "country": "Canada",
+        "noOfRooms": 4,
+        "area": "280m²",
+        "price": "$950,000"
+      },
+      {
+        "HouseName": "Cozy Country House",
+        "imgUrlLocal": "./images/house-3.jpeg",
+        "country": "Australia",
+        "noOfRooms": 3,
+        "area": "200m²",
+        "price": "$750,000"
+      },
+      {
+        "HouseName": "Large Rustical Villa",
+        "imgUrlLocal": "./images/house-4.jpeg",
+        "country": "Switzerland",
+        "noOfRooms": 5,
+        "area": "350m²",
+        "price": "$1,800,000"
+      },
+      {
+        "HouseName": "Majestic Place House",
+        "imgUrlLocal": "./images/house-5.jpeg",
+        "country": "France",
+        "noOfRooms": 5,
+        "area": "320m²",
+        "price": "$2,100,000"
+      },
+      {
+        "HouseName": "Modern Family Apartment",
+        "imgUrlLocal": "./images/house-6.jpeg",
+        "country": "Italy",
+        "noOfRooms": 7,
+        "area": "500m²",
+        "price": "$1,300,000"
+      },
+      {
+        "HouseName": "Lakeview Bungalow",
+        "imgUrlLocal": "./images/house-1.jpeg",
+        "country": "New Zealand",
+        "noOfRooms": 4,
+        "area": "290m²",
+        "price": "$980,000"
       }
+    ]
 
-      function nextSlide() {
-        showSlide(index + 1);
-      }
+    async function FetchGharInfo() {
 
-      function prevSlide() {
-        showSlide(index - 1);
-      }
 
-      const Houses = [
-        {
-          HouseName: "Modern Luxury Villa",
-          HouseImageLocalURL: "./Images/house-1.jpeg",
-          country: "Canada",
-          noOfRooms: 6,
-          area: "400m²",
-          price: "$1,500,000",
-        },
-        {
-          HouseName: "Cozy Suburban Home",
-          HouseImageLocalURL: "./Images/house-1.jpeg",
-          country: "UK",
-          noOfRooms: 4,
-          area: "280m²",
-          price: "$950,000",
-        },
-        {
-          HouseName: "Seaside Cottage",
-          HouseImageLocalURL: "./Images/house-2.jpeg",
-          country: "Australia",
-          noOfRooms: 3,
-          area: "200m²",
-          price: "$750,000",
-        },
-        {
-          HouseName: "Mountain Retreat",
-          HouseImageLocalURL: "./Images/house-3.jpeg",
-          country: "Switzerland",
-          noOfRooms: 5,
-          area: "350m²",
-          price: "$1,800,000",
-        },
-        {
-          HouseName: "Elegant Penthouse",
-          HouseImageLocalURL: "./Images/house-4.jpeg",
-          country: "France",
-          noOfRooms: 5,
-          area: "320m²",
-          price: "$2,100,000",
-        },
-        {
-          HouseName: "Countryside Farmhouse",
-          HouseImageLocalURL: "./Images/house-5.jpeg",
-          country: "Italy",
-          noOfRooms: 7,
-          area: "500m²",
-          price: "$1,300,000",
-        },
-        {
-          HouseName: "Lakeview Bungalow",
-          HouseImageLocalURL: "./Images/house-6.jpeg",
-          country: "New Zealands",
-          noOfRooms: 4,
-          area: "290m²",
-          price: "$980,000",
-        },
-      ];
+      setTimeout(() => {
 
-      const homesElement = document.querySelector(".homes");
+        const homesElement = document.querySelector(".homes");
 
-      Houses.map((house) => {
-        // Create a new div element for each house
-        const homeElement = document.createElement("div");
-        homeElement.classList.add("home");
 
-        // Add the "home" class to the new element
+        homesElement.innerHTML = "";
 
-        // Set the inner HTML for the new home element
-        homeElement.innerHTML = ` <img
-           src="${house.HouseImageLocalURL}"
-           alt="Beautiful Family House"
-           srcset=""
-           class="home__image"
-         />
-         <h5 class="home__name">${house.HouseName}</h5>
-         <div class="home__location">
-           <svg class="home__icon">
-             <use xlink:href="./sprite.svg#icon-location2"></use>
-           </svg>
-           <p>${house.country}</p>
-         </div>
-         <div class="home__roomcounts">
-           <svg class="home__icon">
-             <use xlink:href="./sprite.svg#icon-user"></use>
-           </svg>
-           <p>${house.noOfRooms}</p>
-         </div>
-         <div class="home__area">
-           <svg class="home__icon">
-             <use xlink:href="./sprite.svg#icon-expand"></use>
-           </svg>
-           <p>${house.area}m<sup>2</sup></p>
-         </div>
-         <div class="home__price">
-           <svg class="home__icon">
-             <use xlink:href="./sprite.svg#icon-key"></use>
-           </svg>
-           <p>${house.price}</p>
-         </div>
-         <button class="home__button">Contact Realtors</button>
-       `;
-        // Append the new home element to the homes container
-        homesElement.appendChild(homeElement);
-      });
 
-      AOS.init();
-    </script>
-  </body>
+
+
+
+        // iconElement.style.display = "none";
+
+        // console.log(iconElement);
+
+
+        // homesElement.innerHTML = "";
+
+        Houses.map((house) => {
+          // Create a new div element for each house
+          const homeElement = document.createElement("div");
+          homeElement.classList.add("home");
+          // Add the "home" class to the new elements
+          // Set the inner HTML for the new home element
+          homeElement.innerHTML = ` <img
+             src="${house.imgUrlLocal}"
+             alt="Beautiful Family House"
+             srcset=""
+             class="home__image"
+           />
+           <h5 class="home__name">${house.HouseName}</h5>
+           <div class="home__location">
+             <svg class="home__icon">
+               <use xlink:href="./sprite.svg#icon-location2"></use>
+             </svg>
+             <p>${house.country}</p>
+           </div>
+           <div class="home__roomcounts">
+             <svg class="home__icon">
+               <use xlink:href="./sprite.svg#icon-user"></use>
+             </svg>
+             <p>${house.noOfRooms}</p>
+           </div>
+           <div class="home__area">
+             <svg class="home__icon">
+               <use xlink:href="./sprite.svg#icon-expand"></use>
+             </svg>
+             <p>${house.area}m<sup>2</sup></p>
+           </div>
+           <div class="home__price">
+             <svg class="home__icon">
+               <use xlink:href="./sprite.svg#icon-key"></use>
+             </svg>
+             <p>${house.price}</p>
+           </div>
+           <button class="home__button">Contact Realtors</button>
+         `;
+          // Append the new home element to the homes container
+          homesElement.appendChild(homeElement);
+        });
+      }, 5000)
+
+
+      // homesElement.innerHTML = ``;
+
+
+
+
+
+
+
+
+
+      //     const response = await fetch("http://localhost:4000/");
+
+      //     console.log(response);
+
+      //     const Houses = await response.json();
+
+
+      //     const homesElement = document.querySelector(".homes");
+
+      //     Houses.map((house) => {
+      //       // Create a new div element for each house
+      //       const homeElement = document.createElement("div");
+      //       homeElement.classList.add("home");
+
+      //       // Add the "home" class to the new elements
+
+      //       // Set the inner HTML for the new home element
+      //       homeElement.innerHTML = ` <img
+      //      src="${house.imgUrlLocal}"
+      //      alt="Beautiful Family House"
+      //      srcset=""
+      //      class="home__image"
+      //    />
+      //    <h5 class="home__name">${house.HouseName}</h5>
+      //    <div class="home__location">
+      //      <svg class="home__icon">
+      //        <use xlink:href="./sprite.svg#icon-location2"></use>
+      //      </svg>
+      //      <p>${house.country}</p>
+      //    </div>
+      //    <div class="home__roomcounts">
+      //      <svg class="home__icon">
+      //        <use xlink:href="./sprite.svg#icon-user"></use>
+      //      </svg>
+      //      <p>${house.noOfRooms}</p>
+      //    </div>
+      //    <div class="home__area">
+      //      <svg class="home__icon">
+      //        <use xlink:href="./sprite.svg#icon-expand"></use>
+      //      </svg>
+      //      <p>${house.area}m<sup>2</sup></p>
+      //    </div>
+      //    <div class="home__price">
+      //      <svg class="home__icon">
+      //        <use xlink:href="./sprite.svg#icon-key"></use>
+      //      </svg>
+      //      <p>${house.price}</p>
+      //    </div>
+      //    <button class="home__button">Contact Realtors</button>
+      //  `;
+
+
+
+    }
+
+
+    FetchGharInfo();
+
+    AOS.init({ duration: 1000, offset: 200, once: false, mirror: true });
+
+
+  </script>
+</body>
+
 </html>

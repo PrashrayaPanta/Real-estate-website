@@ -70,8 +70,8 @@
         <img src="./Images/gal-10.jpeg" class="slide" alt="Image 2" />
         <img src="./Images/gal-11.jpeg" class="slide" alt="Image 3" />
       </div>
-      <button class="prev" onclick="prevSlide()">&#10094;</button>
-      <button class="next" onclick="nextSlide()">&#10095;</button>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
     </div>
   </div>
   <div class="top-relators">
@@ -535,10 +535,12 @@
       doloribus?]
     </div>
   </footer>
+
+  <script type="module" src="./main.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
   <script>
-    AOS.init();
+    AOS.init({ duration: 1000, offset: 200, once: false, mirror: true });
     function showHideAboutMenu() {
       const sidebarMenuElement = document.querySelector(
         ".sidebar__about__menu"
@@ -567,28 +569,30 @@
       }
     }
 
-    let index = 0;
-    const slides = document.querySelectorAll(".slide");
-    const totalSlides = slides.length;
+    // let index = 0;
+    // const slides = document.querySelectorAll(".slide");
+    // const totalSlides = slides.length;
 
-    function showSlide(i) {
-      index = (i + totalSlides) % totalSlides; // Handle wrap-around
-      document.querySelector(".slider").style.transform = `translateX(-${index * 100
-        }%)`;
-    }
+    // function showSlide(i) {
+    //   index = (i + totalSlides) % totalSlides; // Handle wrap-around
+    //   document.querySelector(".slider").style.transform = `translateX(-${index * 100
+    //     }%)`;
+    // }
 
-    function nextSlide() {
-      showSlide(index + 1);
-    }
+    // function nextSlide() {
+    //   showSlide(index + 1);
+    // }
 
-    function prevSlide() {
-      showSlide(index - 1);
-    }
-
-
+    // function prevSlide() {
+    //   showSlide(index - 1);
+    // }
 
 
     const Houses = [
+
+
+
+
       {
         "HouseName": "Beautiful Family House",
         "imgUrlLocal": "./images/house-1.jpeg",
@@ -647,7 +651,7 @@
       }
     ]
 
-    async function FetchGharInfo() {
+    async function FetchGharInfoAndDisplay() {
 
 
       setTimeout(() => {
@@ -656,14 +660,6 @@
 
 
         homesElement.innerHTML = "";
-
-
-
-
-
-        // iconElement.style.display = "none";
-
-        // console.log(iconElement);
 
 
         // homesElement.innerHTML = "";
@@ -710,78 +706,13 @@
           // Append the new home element to the homes container
           homesElement.appendChild(homeElement);
         });
-      }, 5000)
-
-
-      // homesElement.innerHTML = ``;
-
-
-
-
-
-
-
-
-
-      //     const response = await fetch("http://localhost:4000/");
-
-      //     console.log(response);
-
-      //     const Houses = await response.json();
-
-
-      //     const homesElement = document.querySelector(".homes");
-
-      //     Houses.map((house) => {
-      //       // Create a new div element for each house
-      //       const homeElement = document.createElement("div");
-      //       homeElement.classList.add("home");
-
-      //       // Add the "home" class to the new elements
-
-      //       // Set the inner HTML for the new home element
-      //       homeElement.innerHTML = ` <img
-      //      src="${house.imgUrlLocal}"
-      //      alt="Beautiful Family House"
-      //      srcset=""
-      //      class="home__image"
-      //    />
-      //    <h5 class="home__name">${house.HouseName}</h5>
-      //    <div class="home__location">
-      //      <svg class="home__icon">
-      //        <use xlink:href="./sprite.svg#icon-location2"></use>
-      //      </svg>
-      //      <p>${house.country}</p>
-      //    </div>
-      //    <div class="home__roomcounts">
-      //      <svg class="home__icon">
-      //        <use xlink:href="./sprite.svg#icon-user"></use>
-      //      </svg>
-      //      <p>${house.noOfRooms}</p>
-      //    </div>
-      //    <div class="home__area">
-      //      <svg class="home__icon">
-      //        <use xlink:href="./sprite.svg#icon-expand"></use>
-      //      </svg>
-      //      <p>${house.area}m<sup>2</sup></p>
-      //    </div>
-      //    <div class="home__price">
-      //      <svg class="home__icon">
-      //        <use xlink:href="./sprite.svg#icon-key"></use>
-      //      </svg>
-      //      <p>${house.price}</p>
-      //    </div>
-      //    <button class="home__button">Contact Realtors</button>
-      //  `;
-
-
+      }, 500)
 
     }
 
+    FetchGharInfoAndDisplay();
 
-    FetchGharInfo();
 
-    AOS.init({ duration: 1000, offset: 200, once: false, mirror: true });
 
 
   </script>

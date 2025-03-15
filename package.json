@@ -16,7 +16,5 @@
   },
   "homepage": "https://github.com/PrashrayaPanta/Real-estate-website#readme",
   "description": "",
-  "dependencies": {
-    "aos": "^3.0.0-beta.6"
-  }
+  "dependencies": {}
 }

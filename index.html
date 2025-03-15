@@ -5,9 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body class="container">
@@ -17,7 +18,7 @@
 
       <ul class="sidebar__lists" style="list-style-type: none" id="lists">
         <li id="sidebar__anchorplussubmenu1" style="position: relative; background-color: yellow">
-          <a href="#" onclick="showHideAboutMenu()" style="
+          <a href="#" class="about__anchor" style="
                 text-decoration: none;
                 color: inherit;
                 background-color: yellow;
@@ -38,7 +39,7 @@
           </ul>
         </li>
         <li id="sidebar__anchorplussubmenu2" style="position: relative; background-color: yellow">
-          <a href="#" onclick="showHideServiceMenu()" style="
+          <a href="#" class="services__anchor" style="
                 text-decoration: none;
                 color: inherit;
                 background-color: yellow;
@@ -536,56 +537,15 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script type="module" src="./main.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 
   <script>
-    AOS.init({ duration: 1000, offset: 200, once: false, mirror: true });
-    function showHideAboutMenu() {
-      const sidebarMenuElement = document.querySelector(
-        ".sidebar__about__menu"
-      );
+    AOS.init();
 
-      if (
-        sidebarMenuElement.classList.contains("sidebar__about__menu-none")
-      ) {
-        sidebarMenuElement.classList.remove("sidebar__about__menu-none");
-      } else {
-        sidebarMenuElement.classList.add("sidebar__about__menu-none");
-      }
-    }
 
-    function showHideServiceMenu() {
-      const sidebarMenuElement = document.querySelector(
-        ".sidebar__services__menu"
-      );
-      console.log(sidebarMenuElement);
-      if (
-        sidebarMenuElement.classList.contains("sidebar__services__menu-none")
-      ) {
-        sidebarMenuElement.classList.remove("sidebar__services__menu-none");
-      } else {
-        sidebarMenuElement.classList.add("sidebar__services__menu-none");
-      }
-    }
-
-    // let index = 0;
-    // const slides = document.querySelectorAll(".slide");
-    // const totalSlides = slides.length;
-
-    // function showSlide(i) {
-    //   index = (i + totalSlides) % totalSlides; // Handle wrap-around
-    //   document.querySelector(".slider").style.transform = `translateX(-${index * 100
-    //     }%)`;
-    // }
-
-    // function nextSlide() {
-    //   showSlide(index + 1);
-    // }
-
-    // function prevSlide() {
-    //   showSlide(index - 1);
-    // }
 
 
     const Houses = [

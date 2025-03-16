@@ -16,3 +16,9 @@ console.log(nextSlide, prevSlide, slides, index, totalSlides, showSlide);
 import { showHideAboutMenu, showHideServiceMenu } from "./Menu.js";
 
 console.log(showHideAboutMenu, showHideServiceMenu);
+
+import { Search } from "./Search.js";
+
+console.log(Search);
+
+import { FetchGharInfoAndDisplay } from "./FetchGharInfoAndDisplay.js";

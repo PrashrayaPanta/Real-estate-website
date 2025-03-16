@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
@@ -180,12 +180,16 @@
 
 
 
+  <form class="search">
+    <input type="text" placeholder="Search" id="search">
+  </form>
 
   <div class="homes">
 
 
-
     <i class="fa-solid fa-refresh fa-spin" style="width: 22px;display: block;margin: 0 auto;"></i>
+
+
 
 
 
@@ -507,6 +511,8 @@
 
   </div>
 
+
+
   <div class="img__galleries">Image galleries</div>
   <footer class="footer">
     <ul class="nav">
@@ -539,138 +545,16 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+
   <script type="module" src="./main.js"></script>
+
+
 
 
   <script>
     AOS.init();
 
-
-
-
-    const Houses = [
-
-
-
-
-      {
-        "HouseName": "Beautiful Family House",
-        "imgUrlLocal": "./images/house-1.jpeg",
-        "country": "USA",
-        "noOfRooms": 5,
-        "area": "325m²",
-        "price": "$1,200,000"
-      },
-      {
-        "HouseName": "Modern Glass Villa",
-        "imgUrlLocal": "./images/house-2.jpeg",
-        "country": "Canada",
-        "noOfRooms": 4,
-        "area": "280m²",
-        "price": "$950,000"
-      },
-      {
-        "HouseName": "Cozy Country House",
-        "imgUrlLocal": "./images/house-3.jpeg",
-        "country": "Australia",
-        "noOfRooms": 3,
-        "area": "200m²",
-        "price": "$750,000"
-      },
-      {
-        "HouseName": "Large Rustical Villa",
-        "imgUrlLocal": "./images/house-4.jpeg",
-        "country": "Switzerland",
-        "noOfRooms": 5,
-        "area": "350m²",
-        "price": "$1,800,000"
-      },
-      {
-        "HouseName": "Majestic Place House",
-        "imgUrlLocal": "./images/house-5.jpeg",
-        "country": "France",
-        "noOfRooms": 5,
-        "area": "320m²",
-        "price": "$2,100,000"
-      },
-      {
-        "HouseName": "Modern Family Apartment",
-        "imgUrlLocal": "./images/house-6.jpeg",
-        "country": "Italy",
-        "noOfRooms": 7,
-        "area": "500m²",
-        "price": "$1,300,000"
-      },
-      {
-        "HouseName": "Lakeview Bungalow",
-        "imgUrlLocal": "./images/house-1.jpeg",
-        "country": "New Zealand",
-        "noOfRooms": 4,
-        "area": "290m²",
-        "price": "$980,000"
-      }
-    ]
-
-    async function FetchGharInfoAndDisplay() {
-
-
-      setTimeout(() => {
-
-        const homesElement = document.querySelector(".homes");
-
-
-        homesElement.innerHTML = "";
-
-
-        // homesElement.innerHTML = "";
-
-        Houses.map((house) => {
-          // Create a new div element for each house
-          const homeElement = document.createElement("div");
-          homeElement.classList.add("home");
-          // Add the "home" class to the new elements
-          // Set the inner HTML for the new home element
-          homeElement.innerHTML = ` <img
-             src="${house.imgUrlLocal}"
-             alt="Beautiful Family House"
-             srcset=""
-             class="home__image"
-           />
-           <h5 class="home__name">${house.HouseName}</h5>
-           <div class="home__location">
-             <svg class="home__icon">
-               <use xlink:href="./sprite.svg#icon-location2"></use>
-             </svg>
-             <p>${house.country}</p>
-           </div>
-           <div class="home__roomcounts">
-             <svg class="home__icon">
-               <use xlink:href="./sprite.svg#icon-user"></use>
-             </svg>
-             <p>${house.noOfRooms}</p>
-           </div>
-           <div class="home__area">
-             <svg class="home__icon">
-               <use xlink:href="./sprite.svg#icon-expand"></use>
-             </svg>
-             <p>${house.area}m<sup>2</sup></p>
-           </div>
-           <div class="home__price">
-             <svg class="home__icon">
-               <use xlink:href="./sprite.svg#icon-key"></use>
-             </svg>
-             <p>${house.price}</p>
-           </div>
-           <button class="home__button">Contact Realtors</button>
-         `;
-          // Append the new home element to the homes container
-          homesElement.appendChild(homeElement);
-        });
-      }, 500)
-
-    }
-
-    FetchGharInfoAndDisplay();
 
 
 

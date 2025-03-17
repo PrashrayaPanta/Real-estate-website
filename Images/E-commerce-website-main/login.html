@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce|Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login_container">
+        <div class="login_content">
+            <div class="login_heading">
+                <h1>Login</h1>
+                <p>Enter login details to get access</p>
+            </div>
+            <form class="flex_col">
+                <div class="input_field">
+                    <div class="user_name flex_col">
+                        <label for="username">Username or Email Address</label>
+                        <input type="text" placeholder="usename/Email address" id="username" required>
+                    </div>
+                    <div class="password flex_col">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Enter password" id="password" required>
+                    </div>
+                    <div class="check_box flex_between">
+                        <p><input type="checkbox" required> <span>keep me logged in</span></p>
+                        <p class="orange"><a href="">forgot password?</a></p>
+                    </div>
+                </div>
+                <div class="flex_between sigin">
+                    <p>Don't have an account? <span class="orange"><a href="register.html">sign up</a></span> here</p>
+                    <button>login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

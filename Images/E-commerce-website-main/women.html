@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | E-commerce Website</title>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <!-- Boxicon CDN link  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS link file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper js CDN link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- cart CSS link  -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="men.css">
+</head>
+
+<body>
+    <header>
+        <div class="border_bottom">
+            <!-- ------------- top header start  -------------- -->
+            <div class="top_header flex_between container" id="top_header">
+                <div class="top_left">
+                    <ul class="flex">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="top_right flex">
+                    <ul class="flex social_icon">
+                        <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-instagram-alt'></i></a></li>
+                        <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                    </ul>
+                    <div class="cross"><i class='bx bx-x' id="close_icon"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------- top header ends --------------  -->
+
+
+        <!-- --------- nav links starts -----------------  -->
+        <nav id="navbar">
+            <div class="container flex_between">
+                <div class="logo">
+                    <h1>Logo.</h1>
+                </div>
+                <div class="nav_links">
+                    <ul class="flex capitalize">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="men.html">men</a></li>
+                        <li><a href="women.html" id="womenLink">women</a></li>
+                        <li><a href="baby.html">baby collection</a></li>
+                        <li class="drop_down">
+                            <a href="" class="page">pages <i class='bx bx-chevron-down'></i> </a>
+                            <ul class="drop_down_menu">
+                                <li><a href="login.html">login</a></li>
+                                <li><a href="cart.html">cart</a></li>
+                                <li><a href="productDetail.html">product details</a></li>
+                                <li><a href="">product checkout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+
+                <div class=" flex">
+                    <div class="menu_bar" id="menu_bar">
+                        <span>Menu</span> <i class='bx bx-menu'></i>
+                    </div>
+                    <div class="user_icon">
+                        <i class='bx bx-search' id="search"></i>
+                        <a href="login.html"><i class='bx bx-user'></i></a>
+                        <a href="cart.html"> <i class='bx bx-cart'></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- ----------------------- nak link ends -------------  -->
+
+        <div class="discount">
+            <p>Sale Up To 50% Biggest Discounts. <span class="offer">Hurry! Limited Perriod Offer</span> <span
+                    class="shop">
+                    Shop Now</span></p>
+            <div class="search_box" id="search_box">
+                <input type="text" placeholder="search here...">
+                <i class='bx bx-x' id="close_search_icon"></i>
+            </div>
+        </div>
+    </header>
+    <!-- *************** Header section ends ***********  -->
+
+
+    <!-- *********** Cart section HTML *****************  -->
+    <main>
+        <div class="cart_hero_area">
+            <div class="container">
+                <p class="capitalize cart_H">category</p>
+                <p class="capitalize cart_L"><a href="index.html"> </a>home | women</p>
+            </div>
+        </div>
+
+
+        <div class="men_section container">
+            <div class="men_left">
+                <div class="category">
+                    <select id="categorySelect">
+                        <option value="" selected>Category</option>
+                        <option value="cat1">Category 1</option>
+                        <option value="cat2">Category 2</option>
+                        <option value="cat3">Category 3</option>
+                        <option value="cat4">Category 4</option>
+                    </select>
+                </div>
+                <div class="type">
+                    <select id="typeSelect">
+                        <option value="" selected>Type</option>
+                        <option value="type1">Type 1</option>
+                        <option value="type2">Type 2</option>
+                        <option value="type3">Type 3</option>
+                        <option value="type4">Type 4</option>
+                    </select>
+                </div>
+                <div class="size">
+                    <select id="sizeSelect">
+                        <option value="" selected>size</option>
+                        <option value="size1">XXL</option>
+                        <option value="size2">XL</option>
+                        <option value="size3">L</option>
+                        <option value="size4">M</option>
+                        <option value="size4">SM</option>
+                    </select>
+                </div>
+                <div class="brand_filter">
+                    <p class="capitalize filter_h">filter by brand</p>
+                    <div class="filter">
+                        <p class="capitalize"> <input type="checkbox"> green publication</p>
+                        <p class="capitalize"> <input type="checkbox"> riya publication</p>
+                        <p class="capitalize"> <input type="checkbox"> anrolad publication</p>
+                        <p class="capitalize"> <input type="checkbox"> white publication</p>
+                        <p class="capitalize"> <input type="checkbox"> shevba publication</p>
+                    </div>
+                </div>
+                <div class="brand_filter">
+                    <p class="capitalize filter_b">filter by top search</p>
+                    <div class="filter">
+                        <p class="capitalize"> <input type="radio"> top search</p>
+                        <p class="capitalize"> <input type="radio"> best selling</p>
+                        <p class="capitalize"> <input type="radio"> new</p>
+                        <p class="capitalize"> <input type="radio"> price</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="men_right">
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://m.media-amazon.com/images/I/81ZQml8iC3L._AC_UY1000_.jpg" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://cdn.media.amplience.net/i/gapprod/FA247417_NA_img3_MOB" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRau45SiYkyl4qaAQ4cbBKypUTlJ-WzLdmNWA&s" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://brocksjewelers.com/wp-content/uploads/2015/08/wer833.jpg" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://i.pinimg.com/736x/4d/0a/be/4d0abe7ba2bb84d757405d03ae98775e.jpg" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://img.freepik.com/free-photo/attractive-stylish-smiling-woman-choosing-apparel-clothing-store_285396-4642.jpg" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaxJQ6dLXik8ADM1OlTFZA6k24wmX__9oqVQ&s" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEd1PXZZ32gZVIh1eUdWvgITL7FcOv1qylZQ&s" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/7743570/2022/5/9/4e877067-6ca7-4905-9496-4ef3ac6b1ffb1652099644682-Lino-Perros-White-Solid-Handheld-Bag-2771652099644214-1.jpg" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_PiiB9h47o7f3TkacWzaBJPW-9HYRPIOkqQ&s" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trending_slider_men">
+                    <div class="swiper-slide swiper_slide ">
+                        <img src="https://m.media-amazon.com/images/I/71aJR2pwB+L._AC_SL1500_.jpg" alt="">
+                        <div class="cart">
+                            <i class='bx bxs-cart-add'></i>
+                            <i class='bx bx-heart'></i>
+                            <i class='bx bxs-zoom-in'></i>
+                        </div>
+                        <div class="slider_content">
+                            <p class="capitalize">cashmere tank + bag</p>
+                            <p><span class="light_grey">₹ 1000</span> <span class="light_orange">₹ 1600</span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ********** fixed top scroll bar ********  -->
+    <div class="top_bar">
+        <div class="arrow_one"><i class='bx bx-chevron-up'></i></div>
+        <div class="arrow_two"><i class='bx bx-chevron-up'></i></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="subscribe_section flex_between">
+                <div class="footer_heading">
+                    <p class="footer_H">Subscribe Newsletter</p>
+                    <p class="footer_D">Subscribe newsletter to get 5% on all products.</p>
+                </div>
+                <div class="footer_input">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="subscribe_btn capitalize">subscribe</button>
+                </div>
+                <div class="footer_social_links">
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram-alt'></i>
+                    <i class='bx bxl-youtube'></i>
+                </div>
+            </div>
+
+            <div class="footer_links">
+                <div class="footer_logo">
+                    <p class="logo">Logo.</p>
+                </div>
+                <div class="footer_men_link">
+                    <p class="men capitalize">shop men</p>
+                    <ul>
+                        <li><a href="#">Clothing Fashion</a></li>
+                        <li><a href="#"> Winter</a></li>
+                        <li><a href="#"> Summer</a></li>
+                        <li><a href="#"> Formal</a></li>
+                        <li><a href="#"> Casual</a></li>
+                    </ul>
+                </div>
+                <div class="footer_women_link">
+                    <p class="men capitalize">shop women</p>
+                    <ul>
+                        <li><a href="#">Clothing Fashion</a></li>
+                        <li><a href="#"> Winter</a></li>
+                        <li><a href="#"> Summer</a></li>
+                        <li><a href="#"> Formal</a></li>
+                        <li><a href="#"> Casual</a></li>
+                    </ul>
+                </div>
+                <div class="footer_baby_link">
+                    <p class="men capitalize">shop baby</p>
+                    <ul>
+                        <li><a href="#">Clothing Fashion</a></li>
+                        <li><a href="#"> Winter</a></li>
+                        <li><a href="#"> Summer</a></li>
+                        <li><a href="#"> Formal</a></li>
+                        <li><a href="#"> Casual</a></li>
+                    </ul>
+                </div>
+                <div class="footer_quick_link">
+                    <p class="men capitalize">quick links</p>
+                    <ul>
+                        <li><a href="#">Track Your Order
+                        <li><a href="#"> Support</a></li>
+                        <li><a href="#"> FAQ</a></li>
+                        <li><a href="#"> Carrier</a></li>
+                        <li><a href="#"> About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_copyRight">
+                <p>Copyright ©<span id="year"></span> All rights reserved | This template refrence is taken from
+                    Colorlib</p>
+            </div>
+        </div>
+    </footer>
+    <!-- swiper cdn link for js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

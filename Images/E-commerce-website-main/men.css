@@ -1,0 +1,137 @@
+#menLink.menActive {
+  color: var(--hover-font);
+  font-size: 18px;
+}
+#womenLink.womenActive {
+  color: var(--hover-font);
+  font-size: 18px;
+}
+#baby.babyActive {
+  color: var(--hover-font);
+  font-size: 18px;
+}
+.men_section {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 40px;
+}
+
+.men_right {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.swiper_slide img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.men_left {
+  border: 1px solid rgba(128, 128, 128, 0.403);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 60px 30px 30px 30px;
+  height: fit-content;
+}
+
+.men_left select {
+  padding: 10px;
+  cursor: pointer;
+  background: transparent;
+  margin-bottom: 40px;
+  width: 200px;
+  outline: none;
+  border-radius: 10px;
+  border-color: rgba(128, 128, 128, 0.245);
+}
+.swiper_slide{
+  position: relative;
+}
+.trending_slider_men .cart {
+  background: var(--white-font);
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+
+.trending_slider_men .cart i {
+  font-size: 30px;
+  color: var(--grey-font);
+  padding: 10px 12px;
+  transition: all .4s ease-in-out;
+}
+
+.trending_slider_men .cart i:hover {
+  background: var(--hover-font);
+  color: var(--white-font);
+}
+.brand_filter .filter_h{
+  font-size: 20px;
+  color: var(--hover-font);
+  font-weight: 500;
+  margin: 20px 0;
+}
+.brand_filter .filter_b{
+  font-size: 20px;
+  color: var(--dark-blue);
+  font-weight: 500;
+  margin: 50px 0 20px 0;
+}
+.brand_filter .filter{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.brand_filter .filter p{
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand_filter .filter p input{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.brand_filter .filter p input[type="checkbox"]:checked{
+ background: var(--hover-font);
+}
+
+
+@media (max-width: 1024px) {
+  .men_right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 800px) {
+  .men_right {
+    grid-template-columns: 1fr;
+    /* order: 1; */
+  }
+  .men_left {
+    align-items: center;
+    /* order: 2; */
+  }
+  
+
+  .men_section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+

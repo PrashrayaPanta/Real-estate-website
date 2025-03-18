@@ -2,7 +2,7 @@ import { HousesArrayData } from "./Houses.js";
 
 console.log(HousesArrayData);
 
-document.getElementById("4-room").onchange = TrueOrFalse;
+document.getElementById("4-room").onchange = Room4Search;
 
 document.getElementById("3-room").onchange = Room3Search;
 
@@ -10,7 +10,7 @@ document.getElementById("2-room").onchange = Room2Search;
 
 document.getElementById("1-room").onchange = Room1Search;
 
-function TrueOrFalse(event) {
+function Room4Search(event) {
   if (event.target.checked) {
     const FilteredArrayOnly4Room = HousesArrayData.filter(
       (House) => House.noOfRooms === 4
@@ -419,8 +419,6 @@ function Room2Search(event) {
 }
 
 function Room1Search(event) {
-  console.log("Room ");
-
   if (event.target.checked) {
     const FilteredArrayOnly1Room = HousesArrayData.filter(
       (House) => House.noOfRooms === 1

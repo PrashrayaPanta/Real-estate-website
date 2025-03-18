@@ -434,6 +434,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+.checkbox__with__label h1 {
+  font-weight: 200;
+  font-size: 2rem;
+}
 .checkbox__with__label input {
   background-color: blue;
 }

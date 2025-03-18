@@ -35,7 +35,7 @@ export const HousesArrayData = [
     HouseName: "Majestic Place House",
     imgUrlLocal: "./images/house-5.jpeg",
     country: "France",
-    noOfRooms: 5,
+    noOfRooms: 1,
     area: "320m²",
     price: "$2,100,000",
   },

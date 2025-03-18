@@ -25,13 +25,13 @@ export function Search(e) {
 
   //Updating this filtered array(country basis) in UI
 
-  function FetchGharInfoAndDisplay() {
+  function FilteredHousesArrayInfoAndDisplay() {
     setTimeout(() => {
       const homesElement = document.querySelector(".homes");
 
       homesElement.innerHTML = "";
 
-      console.log(homesElement);
+      // console.log(homesElement);
 
       // console.log(homesElement);
 
@@ -106,5 +106,5 @@ export function Search(e) {
     }, 500);
   }
 
-  FetchGharInfoAndDisplay();
+  FilteredHousesArrayInfoAndDisplay();
 }

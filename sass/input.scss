@@ -23,7 +23,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw min-content repeat(3, min-content);
+  grid-template-rows: 80vh min-content 40vw min-content min-content repeat(
+      3,
+      min-content
+    );
   grid-template-columns:
     [sidebar-start] 20rem [sidebar-end full-start] minmax(3rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
@@ -472,5 +475,25 @@ body {
     &:focus {
       outline: none;
     }
+  }
+}
+
+.checkbox__with__label {
+  grid-column: center-start / center-end;
+  background-color: blue;
+  display: grid;
+
+  grid-template-columns: max-content min-content min-content min-content min-content min-content min-content min-content min-content;
+
+  align-items: center;
+
+  justify-content: center;
+
+  input {
+    background-color: blue;
+  }
+
+  label {
+    background-color: pink;
   }
 }

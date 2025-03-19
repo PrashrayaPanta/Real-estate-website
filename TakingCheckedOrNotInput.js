@@ -10,6 +10,8 @@ document.getElementById("2-room").onchange = Room2Search;
 
 document.getElementById("1-room").onchange = Room1Search;
 
+// document.querySelector(".noofroom").onchange = Room1234Search;
+
 function Room4Search(event) {
   if (event.target.checked) {
     const FilteredArrayOnly4Room = HousesArrayData.filter(
@@ -553,9 +555,3 @@ function Room1Search(event) {
     }, 500);
   }
 }
-
-// function FetchGharInfoAndDisplay() {}
-
-// console.log(FilteredArrayOnly4Room);
-
-// console.log(HousesArrayData);

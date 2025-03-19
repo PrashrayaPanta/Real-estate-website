@@ -1,20 +1,20 @@
 function showHideAboutMenu() {
-  const sidebarMenuElement = document.querySelector(".sidebar__about__menu");
+  const appmenuMenuElement = document.querySelector(".appmenu__about__menu");
 
-  if (sidebarMenuElement.classList.contains("sidebar__about__menu-none")) {
-    sidebarMenuElement.classList.remove("sidebar__about__menu-none");
+  if (appmenuMenuElement.classList.contains("appmenu__about__menu-none")) {
+    appmenuMenuElement.classList.remove("appmenu__about__menu-none");
   } else {
-    sidebarMenuElement.classList.add("sidebar__about__menu-none");
+    appmenuMenuElement.classList.add("appmenu__about__menu-none");
   }
 }
 
 function showHideServiceMenu() {
-  const sidebarMenuElement = document.querySelector(".sidebar__services__menu");
-  console.log(sidebarMenuElement);
-  if (sidebarMenuElement.classList.contains("sidebar__services__menu-none")) {
-    sidebarMenuElement.classList.remove("sidebar__services__menu-none");
+  const appmenuMenuElement = document.querySelector(".appmenu__services__menu");
+  console.log(appmenuMenuElement);
+  if (appmenuMenuElement.classList.contains("appmenu__services__menu-none")) {
+    appmenuMenuElement.classList.remove("appmenu__services__menu-none");
   } else {
-    sidebarMenuElement.classList.add("sidebar__services__menu-none");
+    appmenuMenuElement.classList.add("appmenu__services__menu-none");
   }
 }
 

@@ -25,7 +25,7 @@ export function Search(e) {
 
   //Updating this filtered array(country basis) in UI
 
-  function FilteredHousesArrayInfoAndDisplay() {
+  function FilteredHousesArrayonTheBaisofCountryInfoAndDisplay() {
     setTimeout(() => {
       const homesElement = document.querySelector(".homes");
 
@@ -106,5 +106,5 @@ export function Search(e) {
     }, 500);
   }
 
-  FilteredHousesArrayInfoAndDisplay();
+  FilteredHousesArrayonTheBaisofCountryInfoAndDisplay();
 }

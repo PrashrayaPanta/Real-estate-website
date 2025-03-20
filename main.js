@@ -17,8 +17,6 @@ import { showHideAboutMenu, showHideServiceMenu } from "./Menu.js";
 
 console.log(showHideAboutMenu, showHideServiceMenu);
 
-import { Search } from "./Search.js";
-
-console.log(Search);
+import { Search } from "./SearchOnTheBasisOfCountry.js";
 
 import { FetchGharInfoAndDisplay } from "./FetchGharInfoAndDisplay.js";

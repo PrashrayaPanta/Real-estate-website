@@ -255,7 +255,6 @@ body {
 .homes {
   grid-column: center-start/center-end;
   margin: 5rem 0;
-  background-color: blue;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2.2rem;

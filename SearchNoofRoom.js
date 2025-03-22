@@ -5,17 +5,16 @@ console.log(HousesArrayData);
 document
   .querySelectorAll(".noofroom")
   .forEach(
-    (certainCheckEleemnt, index) =>
-      (certainCheckEleemnt.onchange = Room1andRoom2Search)
+    (certainCheckEleemnt, index) => (certainCheckEleemnt.onchange = AllRoom)
   );
 
-function Room1andRoom2Search(event) {
+function AllRoom(event) {
   console.log(event.target.id.split("-")[0]);
 
   console.log(event.target.checked);
 
   if (event.target.checked) {
-    console.log("Chgecked");
+    console.log("Checked");
 
     const FilteredArrayRoom = HousesArrayData.filter(
       (House) => House.noOfRooms == event.target.id.split("-")[0]
@@ -94,13 +93,15 @@ function Room1andRoom2Search(event) {
     // FetchGharInfoAndDisplay();
   } else {
     setTimeout(() => {
+      console.log("Hello I am disselect");
+
       const homesElement = document.querySelector(".homes");
 
-      const NoDataFoundElement = document.querySelector(".nodatafound");
+      homesElement.innerHTML = "";
 
       // console.log(NoDataFoundElement);
 
-      NoDataFoundElement.remove();
+      // NoDataFoundElement.remove();
 
       console.log(homesElement);
 

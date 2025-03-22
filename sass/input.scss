@@ -23,94 +23,18 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw min-content min-content repeat(
-      3,
-      min-content
-    );
+  grid-template-rows: min-content 50vw min-content 600px repeat(3, min-content);
   grid-template-columns:
-    [appmenu-start] 20rem [appmenu-end full-start] minmax(3rem, 1fr)
+    [full-start] minmax(3rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
     minmax(3rem, 1fr) [full-end];
-
-  @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 5rem 80vh min-content 40vw min-content repeat(
-        3,
-        min-content
-      );
-
-    grid-template-columns:
-      [full-start] minmax(3rem, 1fr)
-      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-      [center-end]
-      minmax(3rem, 1fr) [full-end];
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 5rem calc(100vh - 5rem);
-  }
 }
 
 .appmenu {
   background-color: red;
-  grid-row: 1/-1;
   font-size: 2rem;
-
-  &__item__anchor {
-    text-decoration: none;
-    display: block;
-    text-align: center;
-  }
-
-  &__lists {
-    @media only screen and (max-width: $bp-large) {
-      display: flex;
-      gap: 15rem;
-    }
-  }
-
-  &__anchor {
-  }
-
-  &__about__menu {
-    list-style-type: none;
-    background-color: white;
-
-    @media only screen and (max-width: $bp-large) {
-      position: absolute;
-      left: -80%;
-      padding: 1rem;
-    }
-
-    &-none {
-      display: none;
-    }
-  }
-
-  &__services__menu {
-    list-style-type: none;
-    background-color: white;
-
-    @media only screen and (max-width: $bp-large) {
-      position: absolute;
-      left: -20%;
-      width: max-content;
-      padding: 1rem;
-    }
-
-    &-none {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: $bp-large) {
-    grid-column: 1/-1;
-    grid-row: 1/2;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+  grid-column: 1/-1;
 }
 
 .header {
@@ -344,7 +268,6 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
-    // background-size: cover;
 
     @media only screen and (max-width: $bp-medium) {
       grid-column: 1 / -1;

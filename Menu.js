@@ -18,8 +18,8 @@ function showHideServiceMenu() {
   }
 }
 
-document.querySelector(".about__anchor").onclick = showHideAboutMenu;
+// document.querySelector(".about__anchor").onclick = showHideAboutMenu;
 
 document.querySelector(".services__anchor").onclick = showHideServiceMenu;
 
-export { showHideAboutMenu, showHideServiceMenu };
+// export { showHideAboutMenu, showHideServiceMenu };

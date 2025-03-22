@@ -13,9 +13,9 @@ import {
 
 console.log(nextSlide, prevSlide, slides, index, totalSlides, showSlide);
 
-import { showHideAboutMenu, showHideServiceMenu } from "./Menu.js";
+// import { showHideAboutMenu, showHideServiceMenu } from "./Menu.js";
 
-console.log(showHideAboutMenu, showHideServiceMenu);
+// console.log(showHideAboutMenu, showHideServiceMenu);
 
 import { Search } from "./SearchOnTheBasisOfCountry.js";
 

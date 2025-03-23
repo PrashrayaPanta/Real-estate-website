@@ -23,7 +23,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 50vw min-content 600px repeat(3, min-content);
+  grid-template-rows: min-content 70vh min-content 600px repeat(3, min-content);
   grid-template-columns:
     [full-start] minmax(3rem, 1fr)
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
@@ -192,9 +192,11 @@ body {
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(39rem, 0fr));
 
   gap: 2.2rem;
+
+  justify-content: center;
 }
 
 .home {
@@ -202,6 +204,8 @@ body {
   grid-template-columns: 1fr 1fr;
   transition: all 0.2s;
   row-gap: 22px;
+  font-size: 2rem;
+  // background-color: red;
 
   &:hover {
     transform: translateY(-1rem);

@@ -5,9 +5,13 @@ console.log(HousesArrayData);
 document.querySelector(".search").onsubmit = Search;
 
 export function Search(e) {
+  console.log("Hello I am inside search");
+
   e.preventDefault();
 
   const serachTerm = document.getElementById("search").value;
+
+  console.log(serachTerm);
 
   const SearchOnTheBasisOfInput = (country) => {
     const FilteredArray = HousesArrayData.filter(

@@ -4,7 +4,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-1.jpeg",
     country: "USA",
     noOfRooms: 5,
-    area: "325m²",
+    area: "325",
     price: "$1,200,000",
   },
   {
@@ -12,7 +12,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-2.jpeg",
     country: "Canada",
     noOfRooms: 4,
-    area: "280m²",
+    area: "280",
     price: "$950,000",
   },
   {
@@ -20,7 +20,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-3.jpeg",
     country: "Australia",
     noOfRooms: 3,
-    area: "200m²",
+    area: "200",
     price: "$750,000",
   },
   {
@@ -28,7 +28,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-4.jpeg",
     country: "Switzerland",
     noOfRooms: 5,
-    area: "350m²",
+    area: "350",
     price: "$1,800,000",
   },
   {
@@ -36,7 +36,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-5.jpeg",
     country: "France",
     noOfRooms: 1,
-    area: "320m²",
+    area: "320",
     price: "$2,100,000",
   },
   {
@@ -44,7 +44,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-6.jpeg",
     country: "Italy",
     noOfRooms: 7,
-    area: "500m²",
+    area: "500",
     price: "$1,300,000",
   },
   {
@@ -52,7 +52,7 @@ export const HousesArrayData = [
     imgUrlLocal: "./images/house-1.jpeg",
     country: "New Zealand",
     noOfRooms: 4,
-    area: "290m²",
+    area: "290",
     price: "$980,000",
   },
 ];

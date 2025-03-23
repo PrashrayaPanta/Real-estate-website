@@ -8,6 +8,8 @@ document
     (certainCheckEleemnt, index) => (certainCheckEleemnt.onchange = AllRoom)
   );
 
+let accumulatedRooms = [];
+
 function AllRoom(event) {
   console.log(event.target.id.split("-")[0]);
 
@@ -19,11 +21,22 @@ function AllRoom(event) {
     const FilteredArrayRoom = HousesArrayData.filter(
       (House) => House.noOfRooms == event.target.id.split("-")[0]
     );
+    console.log(FilteredArrayRoom);
+
+    accumulatedRooms = [...accumulatedRooms, ...FilteredArrayRoom];
+
+    console.log("After this console there will be accumulated rooom");
+
+    console.log(accumulatedRooms);
 
     if (FilteredArrayRoom.length <= 0) {
       const homesElements = document.querySelector(".homes");
       homesElements.innerHTML = `<h1 class="nodatafound">No Data Found</h1>`;
     } else {
+      if (FilteredArrayRoom.length == 1) {
+        const homesElement = document.querySelector(".homes");
+      }
+
       setTimeout(() => {
         const homesElement = document.querySelector(".homes");
 
@@ -86,6 +99,8 @@ function AllRoom(event) {
           homesElement.appendChild(homeElement);
         });
       }, 500);
+
+      // console.log(homesElement);
     }
 
     // console.log(FilteredArrayRoom);

@@ -43,7 +43,7 @@ function handleRoomFilter(event) {
 }
 
 // Keep the same updateUI function from previous example
-function updateUI(houses) {
+export function updateUI(houses) {
   const homesElement = document.querySelector(".homes");
   homesElement.innerHTML = "";
 

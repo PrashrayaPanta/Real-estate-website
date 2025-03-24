@@ -9,6 +9,8 @@ document.querySelectorAll(".noofroom").forEach((checkbox) => {
 
 function handleRoomFilter(event) {
   const roomCount = parseInt(event.target.id.split("-")[0]);
+  console.log(roomCount);
+
   const isChecked = event.target.checked;
 
   // Update selected rooms array

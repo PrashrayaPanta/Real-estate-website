@@ -57,7 +57,18 @@ body {
 .container {
   display: grid;
   grid-template-rows: min-content 70vh min-content 600px repeat(3, min-content);
-  grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(10rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(10rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 1200px) {
+  .container {
+    grid-template-rows: 5rem 80vh min-content 40vw min-content repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    grid-template-rows: 5rem calc(100vh - 5rem);
+  }
 }
 
 .appmenu {
@@ -174,7 +185,8 @@ body {
   display: grid;
   margin-top: 12rem;
   margin-bottom: 12rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 3fr));
+  background-color: blue;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 3fr));
   gap: 1rem;
   line-height: 2rem;
 }

@@ -22,7 +22,17 @@
 <body class="container">
 
   <header class="appmenu">
-    Header
+    <div class="appmenu__one">Logoibjjhbui</div>
+
+    <div class="appmenu__normal">
+      <div class="appmenu__two">Realtors and Carousel</div>
+      <div class="appmenu__three"><a href="#features" target="_blank" rel="noopener noreferrer">Features</a></div>
+      <div class="appmenu__four"><a href="#story__picture" target="_blank" rel="noopener noreferrer">Story</a></div>
+      <div class="appmenu__five"><a href="#image__gallery">Image Galleries</a></div>
+      <div class="appmenu__six" target="__blank"><a href="#footer">Footer</a></div>
+
+    </div>
+
   </header>
 
   <div class="header">
@@ -58,7 +68,7 @@
     </div>
   </div>
 
-  <div class="features" data-aos="fade-up" data-aos-delay="200">
+  <div class="features" data-aos="fade-up" data-aos-delay="200" id="features">
     <div class="feature">
       <svg class="feature__icon">
         <use xlink:href="./sprite.svg#icon-sphere"></use>
@@ -121,13 +131,13 @@
     </div>
   </div>
 
-  <div class="story__picture">
+  <div class="story__picture" id="story__picture">
     <img src="https://nexter.netlify.app/img/story-1.jpeg" alt="Couple with new house" srcset=""
       class="story__img--1" />
     <img src="https://nexter.netlify.app/img/story-2.jpeg" alt="New House" srcset="" class="story__img--2" />
   </div>
 
-  <div class="story__content">
+  <div class="story__content" id="story__content">
     <h3 class="heading-3 mb-xs">HAPPY CUSTOMERS</h3>
     <h2 class="heading-2 mb-sm">
       &ldquo;The best decision of my lives&ldquo;
@@ -140,7 +150,7 @@
   </div>
 
 
-  <div class="checkbox__with__label">
+  <div class="checkbox__with__label" id="filtering">
     <h1>Room Filterings</h1>
     <input type="checkbox" id="4-room" class="noofroom" />
     <label for="4-room">4</label>
@@ -457,8 +467,10 @@
 
 
 
-  <div class="img__galleries">Image galleries</div>
-  <footer class="footer">
+  <div class="img__galleries" id="image__gallery">Image galleries</div>
+
+
+  <footer class="footer" id="footer">
     <ul class="nav">
       <li class="nav__item">
         <a href="" class="nav__link">find your dream home</a>

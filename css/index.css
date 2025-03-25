@@ -61,20 +61,46 @@ body {
 }
 @media only screen and (max-width: 1200px) {
   .container {
-    grid-template-rows: 5rem 80vh min-content 40vw min-content repeat(3, min-content);
+    grid-template-rows: min-content 80vh min-content 40vw min-content repeat(3, min-content);
     grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
   }
 }
 @media only screen and (max-width: 800px) {
   .container {
-    grid-template-rows: 5rem calc(100vh - 5rem);
+    grid-template-rows: min-content 50vh;
   }
 }
 
 .appmenu {
-  background-color: red;
   font-size: 2rem;
   grid-column: 1/-1;
+  min-height: 10vh;
+  align-items: center;
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: min-content 1fr;
+  background-color: blue;
+}
+.appmenu__one {
+  background-color: yellow;
+}
+.appmenu__normal {
+  background-color: pink;
+  display: grid;
+  grid-template-columns: max-content min-content min-content max-content min-content;
+  column-gap: 100px;
+  align-items: center;
+}
+.appmenu__normal:hover {
+  background-color: #fff;
+}
+.appmenu__normal a {
+  text-decoration: none;
+  color: inherit;
+  background-color: red;
+}
+.appmenu__normal a:hover {
+  background-color: yellow;
 }
 
 .header {

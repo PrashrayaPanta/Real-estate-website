@@ -31,7 +31,7 @@ body {
     minmax(10rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 5rem 80vh min-content 40vw min-content repeat(
+    grid-template-rows: min-content 80vh min-content 40vw min-content repeat(
         3,
         min-content
       );
@@ -44,14 +44,68 @@ body {
   }
 
   @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 5rem calc(100vh - 5rem);
+    grid-template-rows: min-content 50vh;
   }
 }
 
 .appmenu {
-  background-color: red;
+  // background-color: red;
   font-size: 2rem;
   grid-column: 1/-1;
+
+  min-height: 10vh;
+
+  align-items: center;
+
+  display: grid;
+
+  column-gap: 50px;
+
+  grid-template-columns: min-content 1fr;
+
+  background-color: blue;
+
+  &__one {
+    background-color: yellow;
+  }
+
+  &__two {
+    // background-color: pink;
+  }
+  &__three {
+    // background-color: #c69963;
+  }
+  &__four {
+    // background-color: #fff;
+  }
+  &__five {
+    // background-color: blue;
+  }
+
+  &__normal {
+    background-color: pink;
+
+    display: grid;
+
+    grid-template-columns: max-content min-content min-content max-content min-content;
+
+    column-gap: 100px;
+
+    align-items: center;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      background-color: red;
+    }
+    a:hover {
+      background-color: yellow;
+    }
+  }
 }
 
 .header {

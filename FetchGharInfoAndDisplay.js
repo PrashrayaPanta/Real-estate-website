@@ -10,7 +10,7 @@ export function FetchGharInfoAndDisplay() {
     iconElement.style.display = "none";
 
     updateUI(HousesArrayData);
-  });
+  }, 5000);
 }
 
 FetchGharInfoAndDisplay();

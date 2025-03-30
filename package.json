@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sasscompiler": "sass ./sass/input.scss ./css/index.css -w"
+   "sasscompiler":"sass --watch ./sass/input.scss:./css/index.css ./sass/addTodo.scss:./css/addTodo.css"
   },
   "repository": {
     "type": "git",

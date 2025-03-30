@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @use "./base.scss";
+ *   | ^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass/HomeTypography.scss 1:1  @use
+ *   sass/input.scss 5:1           root stylesheet */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   ╷\a 1 │ @use \"./base.scss\";\a   │ ^^^^^^^^^^^^^^^^^^\a   ╵\a   sass/HomeTypography.scss 1:1  @use\a   sass/input.scss 5:1           root stylesheet";
+}
+
+/*# sourceMappingURL=home.css.map */

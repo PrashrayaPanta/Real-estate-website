@@ -1,8 +1,8 @@
 /* Base Style */
 
-@use "./base.scss";
+@use "./Homebase.scss";
 
-@use "./Typography.scss";
+@use "./HomeTypography.scss";
 
 // $larget-size: 945px;
 
@@ -24,15 +24,15 @@ body {
 .container {
   display: grid;
 
-  grid-template-rows: min-content 70vh min-content 600px repeat(3, min-content);
+  grid-template-rows:min-content 60vh min-content min-content repeat(3, min-content);
   grid-template-columns:
-    [full-start] minmax(10rem, 1fr)
-    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [full-start] minmax(10rem, 20rem)
+    [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
     [center-end]
     minmax(10rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-large) {
-    grid-template-rows: min-content 80vh min-content 40vw min-content repeat(
+    grid-template-rows: min-content 60vh min-content 40vw min-content repeat(
         3,
         min-content
       );
@@ -50,15 +50,16 @@ body {
 }
 
 .appmenu {
-  // background-color: red;
+  background-color: red;
   font-size: 2rem;
   grid-column: 1/-1;
 
-  min-height: 10vh;
+  // min-height: 10vh;
 
   align-items: center;
 
   display: grid;
+
 
   column-gap: 5rem;
 
@@ -66,7 +67,7 @@ body {
 
   // background-color: blue;
 
-  padding: 2rem;
+    padding: 2rem;
 
   &__logo {
     background-color: yellow;
@@ -127,6 +128,7 @@ body {
 
       width: 22px;
       height:22px;
+    
    
     }
     
@@ -153,7 +155,7 @@ body {
 
   padding: 5rem;
 
-  padding-top: 8rem;
+  // padding-top: 5rem;
 
   .slider-container {
     position: relative;
@@ -211,6 +213,8 @@ body {
 .top-relators {
   background-color: bisque;
   grid-column: col-start 7/12;
+
+
 
   display: grid;
 
@@ -299,16 +303,7 @@ body {
     grid-row: 1 / 3;
   }
 
-  h1{
-      
-
-
-
-  }
-
-  p{
-
-  }
+ 
 }
 
 .homes {
@@ -530,6 +525,22 @@ body {
       outline: none;
     }
   }
+
+  a{
+    background-color: blue;
+    border:none;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+  }
+
+
 }
 
 .checkbox__with__label {

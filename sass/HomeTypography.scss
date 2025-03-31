@@ -1,4 +1,4 @@
-@use "./base.scss";
+@use "./Abstract/variables.scss" as variables;
 
 %heading {
   font-weight: 300;
@@ -21,7 +21,7 @@
 .heading-3 {
   @extend %heading;
   font-size: 2rem;
-  color: base.$warm-yellowish-brown;
+  color: variables.$warm-yellowish-brown;
 }
 
 .heading-4 {

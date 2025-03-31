@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Todo</title>
-    <link rel="stylesheet" href="./css/addTodo.css">
+    <link rel="stylesheet" href="./css/addHouseForm.css">
 
 </head>
 <body>
@@ -12,37 +12,37 @@
     <div class="container">
         <h1>Add New House</h1>
         
-        <form class="todo-form" action="/index.html" method="POST">
+        <form class="todo-form" action="./index.html">
             <div class="form-group">
                 <label for="title">House Name:</label>
-                <input type="text" id="title" name="title"  placeholder="Enter House title">
+                <input type="text" id="title" name="title"  placeholder="Enter House title" >
             </div>
             
             <div class="form-group">
                 <label for="description">No of Room</label>
-                <input id="description"  type="number"/>
+                <input id="noofroom"  type="number" />
             </div>
 
                
             <div class="form-group">
                 <label for="description">Square Feet Covered</label>
-                <input id="description"  type="number"/>
+                <input id="squarefeetcovered"  type="number"/>
             </div>
 
 
             <div class="form-group">
                 <label for="description">Located At</label>
-                <input id="description"  type="text"/>
+                <input id="located-at"  type="text"/>
             </div>
             
             
 
             <div class="form-actions">
-                <button type="submit" class="submit-btn">Add Todo</button>
-                <button type="reset" class="cancel-btn">Clear</button>
+                <button type="button" class="submit-btn">Add Todo</button>
+                <button type="button"  class="cancel-btn">Clear</button>
             </div>
         </form>
     </div>
-    <script src="./addformValidation.js"></script>
+    <script src="./addHouse.js"></script>
 </body>
 </html>

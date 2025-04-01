@@ -26,7 +26,7 @@ body {
 .container {
   display: grid;
 
-  grid-template-rows:min-content 60vh min-content min-content repeat(3, min-content);
+  grid-template-rows:min-content 80vh min-content min-content repeat(3, min-content);
   grid-template-columns:
     [full-start] minmax(10rem, 20rem)
     [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end])
@@ -211,8 +211,6 @@ body {
 .top-relators {
   background-color: bisque;
   grid-column: col-start 7/12;
-
-
 
   display: grid;
 

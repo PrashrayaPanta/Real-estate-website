@@ -2,6 +2,16 @@ import { HousesArrayData } from "./Houses.js";
 
 console.log(HousesArrayData);
 
+
+
+
+
+
+console.log(localStorage.getItem("todos"));
+
+
+
+
 import {
   index,
   slides,

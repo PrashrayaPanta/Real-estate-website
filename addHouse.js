@@ -38,42 +38,7 @@ const inputAllement = document.querySelectorAll(".form-input");
 console.log(inputAllement);
 
 
-inputAllement.forEach((inputelement) => {
 
-    // console.log(inputelement);
-
-
-    
-
-
-
-    inputelement.addEventListener("change", function(event){
-
-
-        // console.log(event.target.value);
-
-           
-
-     
-        
-
-     
-
-
-    
-
-    //    console.log(event.target)
-
-
-       
-
-    
-
-    
-
-})
-
-})
 
 
 
@@ -109,65 +74,8 @@ addTodoElement.addEventListener("click", function(event){
 
 
 
-    if(titleValue === ""){
 
 
-        const ErrorElement = document.querySelector(".error-title");
-
-        ErrorElement.style.visibility = "visible";
-  
-        ErrorElement.innerHTML = "Please fill this field";
-
-
-    
-    }else{
-        
-        const ErrorElement = document.querySelector(".error-title");
-
-        ErrorElement.style.visibility = "hidden";
-  
-        ErrorElement.innerHTML = "";
-
-    }
-
-
-
-    if(noofRoomElementValue === ""){
-
-
-        const ErrorElement = document.querySelector(".error-room");
-
-        ErrorElement.style.visibility = "visible";
-  
-        ErrorElement.innerHTML = "Please fill this field";
-    
-    }
-
-
-
-    if( squareFeetCoveredElementValue === ""){
-
-
-        const ErrorElement = document.querySelector(".error-squarefeet");
-
-        ErrorElement.style.visibility = "visible";
-  
-        ErrorElement.innerHTML = "Please fill this field";
-    
-    }
-
-
-
-    if(locatedAtElementValue  === ""){
-
-
-        const ErrorElement = document.querySelector(".error-located-at");
-
-        ErrorElement.style.visibility = "visible";
-  
-        ErrorElement.innerHTML = "Please fill  this field";
-    
-    }
 
 
 
@@ -182,7 +90,7 @@ addTodoElement.addEventListener("click", function(event){
 
 
 
-    const todos = JSON.parse(localStorage.getItem("todos")) || [];
+    const todos = JSON.parse(sessionStorage.getItem("todos")) || [];
 
 
     console.log(todos);
@@ -209,7 +117,7 @@ addTodoElement.addEventListener("click", function(event){
     todos.push({titleValue, noofRoomElementValue, squareFeetCoveredElementValue, locatedAtElementValue});
 
 
-    localStorage.setItem("todos", JSON.stringify(todos));
+    sessionStorage.setItem("todos", JSON.stringify(todos));
 
 
     console.log(todos);

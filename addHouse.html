@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Todo</title>
-    <link rel="stylesheet" href="./css/addHouseForm.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="./css/addHouseForm.css" />
+  </head>
+  <body>
     <h1>Add House Form</h1>
-    <div class="container">
-        <h1>Add New House</h1>
-        
-        <form class="todo-form" action="./index.html">
-            <div class="form-group">
-                <label for="title">House Name:</label>
-                <input type="text" id="title" name="title"  placeholder="Enter House title" required class="form-input" />
-                <p class="error-title">Error</p>
-            </div>
-            
-            <div class="form-group">
-                <label for="description">No of Room</label>
-                <input id="noofroom"  type="number" class="form-input"  />
-                <p class="error-room">Error</p>
-            </div>
+    <div class="container-form">
+      <h1>Add New House</h1>
 
-               
-            <div class="form-group">
-                <label for="description">Square Feet Covered</label>
-                <input id="squarefeetcovered"  type="number" class="form-input"/>
-                <p class="error-squarefeet">Error</p>
-            </div>
-
-
-            <div class="form-group">
-                <label for="description">Located At</label>
-                <input id="located-at"  type="text" class="form-input"/>
-                <p class="error-located-at">Error</p>
-            </div>
-            
-        
-            <div class="form-actions">
-                <button type="button"  class="submit-btn">Add Todo</button>
-                <button type="button"  class="cancel-btn">Clear</button>
-            </div>
-        </form>
-
-        <div class="house-lists">
-            
+      <form class="todo-form" action="./index.html">
+        <div class="form-group">
+          <label for="title">House Name:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter House title"
+            required
+            class="form-input"
+          />
+          <p class="error-title">Error</p>
         </div>
 
+        <div class="form-group">
+          <label for="description">No of Room</label>
+          <input id="noofroom" type="number" class="form-input" />
+          <p class="error-room">Error</p>
+        </div>
 
+        <div class="form-group">
+          <label for="description">Square Feet Covered</label>
+          <input id="squarefeetcovered" type="number" class="form-input" />
+          <p class="error-squarefeet">Error</p>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Located At</label>
+          <input id="located-at" type="text" class="form-input" />
+          <p class="error-located-at">Error</p>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="submit-btn">Add Todo</button>
+          <button type="button" class="cancel-btn">Clear</button>
+        </div>
+      </form>
     </div>
+
+    <div class="container-house-lists"></div>
+
     <script src="./addHouse.js"></script>
-</body>
+  </body>
 </html>

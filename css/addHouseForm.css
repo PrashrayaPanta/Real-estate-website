@@ -4,16 +4,16 @@
   box-sizing: border-box;
 }
 
-.container {
+.container-form {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: red;
 }
-.container h1 {
+.container-form h1 {
   text-align: center;
   color: #2c3e50;
   font-weight: 600;
@@ -68,6 +68,15 @@
   transition: all 0.3s;
 }
 
+.submit-btn {
+  background-color: black;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #27ae60;
+}
+
 .cancel-btn {
   background-color: #e74c3c;
   color: white;
@@ -87,29 +96,14 @@
     justify-content: center;
   }
 }
-.house-list h2 {
-  text-align: left;
-  font-weight: 200;
-}
-
-.error-title {
-  color: red;
-  visibility: hidden;
-}
-
-.error-room {
-  color: red;
-  visibility: hidden;
-}
-
-.error-squarefeet {
-  color: red;
-  visibility: hidden;
-}
-
-.error-located-at {
-  color: red;
-  visibility: hidden;
+.house-list {
+  display: flex;
+  background-color: red;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=addHouseForm.css.map */

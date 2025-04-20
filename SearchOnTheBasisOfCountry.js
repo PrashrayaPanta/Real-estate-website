@@ -5,7 +5,6 @@ console.log(HousesArrayData);
 document.querySelector(".search").onsubmit = Search;
 
 export function Search(e) {
-  console.log("Hello I am inside search");
 
   e.preventDefault();
 

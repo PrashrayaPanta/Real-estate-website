@@ -24,7 +24,6 @@ function handleRoomFilter(event) {
   } else {
     // Remove room count from array
     selectedRooms = selectedRooms.filter((count) => count !== roomCount);
-
     console.log(selectedRooms);
   }
 

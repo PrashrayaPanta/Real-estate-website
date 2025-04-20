@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
- "sasscompiler":"sass ./sass/Pages/Home.scss:./css/home.css ./sass/Pages/AddHouseForm.scss:./css/addHouseForm.css -w"
+    "sasscompiler":"sass ./sass/Pages/Home.scss:./css/home.css ./sass/Pages/AddHouseForm.scss:./css/addHouseForm.css -w"
   },
   "repository": {
     "type": "git",

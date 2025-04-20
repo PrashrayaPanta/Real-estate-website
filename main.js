@@ -1,14 +1,6 @@
 import { HousesArrayData } from "./Houses.js";
 
-console.log(HousesArrayData);
-
-
-
-
-
-
-console.log(localStorage.getItem("todos"));
-
+// console.log(HousesArrayData);
 
 
 
@@ -21,7 +13,7 @@ import {
   prevSlide,
 } from "./Carousels.js";
 
-console.log(nextSlide, prevSlide, slides, index, totalSlides, showSlide);
+// console.log(nextSlide, prevSlide, slides, index, totalSlides, showSlide);
 
 // import { showHideAboutMenu, showHideServiceMenu } from "./Menu.js";
 

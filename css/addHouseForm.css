@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body h1 {
+  text-align: center;
+}
+
 .container-form {
   max-width: 600px;
   margin: 2rem auto;

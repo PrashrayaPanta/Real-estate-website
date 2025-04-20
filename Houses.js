@@ -1,4 +1,4 @@
-export const HousesArrayData = [
+ export const HousesArrayData = [
   {
     HouseName: "Beautiful Family House",
     imgUrlLocal: "./images/house-1.jpeg",
@@ -56,3 +56,5 @@ export const HousesArrayData = [
     price: "$980,000",
   },
 ];
+
+

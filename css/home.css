@@ -114,7 +114,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: min-content 80vh min-content min-content repeat(3, min-content);
+  grid-template-rows: min-content 60vh min-content min-content repeat(3, min-content) min-content min-content;
   grid-template-columns: [full-start] minmax(10rem, 20rem) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(10rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 1200px) {

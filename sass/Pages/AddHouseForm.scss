@@ -1,7 +1,10 @@
 @use "../Base/base.scss";
 
+body h1{
 
+    text-align: center;
 
+}
 
 .container-form  {
     max-width: 600px;
@@ -109,7 +112,6 @@
 
 .house-list{
 
-    
     display: flex;
     background-color: red;
     // flex-direction: column;
